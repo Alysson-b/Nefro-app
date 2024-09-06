@@ -1,0 +1,369 @@
+$font-family: "Inter", sans-serif;
+$prymary-color: #04345A;
+$secondy-color: #00679A;
+$light-color: #D2EBE7;
+$light-blue-color:#8ED7F0;
+$gray-color: #858585;
+$white-color: #fff;
+$red-color: #f30000;
+$orange-color: #ff9600;
+$green-color: #129820;
+$black-color: #000;
+$backgound-linear: #004B87, #04345A;
+
+@mixin flex-center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include flex-center();
+    background-color: $white-color;
+    overflow-x: hidden;
+    font-family: $font-family;
+}
+.home-img img{
+    margin: 20px 0px;
+    width: 250px;
+    height: 150px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}  
+
+/* Estilizaçao dos inputs de login da tela principal */
+.formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logins{
+    margin: 20px 0px 0px;
+    width: 430px;
+    height: 643px;
+    background: linear-gradient(to top, $prymary-color, $prymary-color, $secondy-color);
+    @include flex-center();
+    flex-direction: column;
+    border-radius: 30px;
+    color: $white-color;
+
+}
+.log-inputs{
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 28px;
+    gap: 10px;
+    color: $light-blue-color;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.log-inputs .labelpass{
+    font-size: 18px;
+    font-weight: 400;
+}
+.log-inputs input{
+    font-size: 16px;
+    font-weight: 400;
+    width: 375px;
+    height: 60px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border-color: #ff9600;
+}
+
+.showPass{
+    font-size: 24px;
+    position: absolute;
+    right: 38px;
+    top: 145px;
+    cursor: pointer;
+    color: $secondy-color;
+}
+
+/* Estilizaçao da checkbox e esqueci senha */
+
+
+.check-inputs{
+    max-width: 375px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 8px;
+    font-size: 16px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.checkbox [type="checkbox"]{
+    width: 22px;
+    height: 22px;
+    border: 2px solid $white-color;
+    border-radius: 6px;
+    appearance: none;
+    --webkit-appearance: none;
+    outline: none;
+}
+.check-inputs a{
+    border-bottom: 1px solid $white-color;
+    text-decoration: none;
+    color: $white-color;
+}
+
+/* Estilizaçao do button de login */
+
+.login-button{
+    margin: 30px 0px;
+    width: 376.55px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background: $orange-color;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Estilizaçao do rodapé de login */
+.lines{
+    max-width: 375px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    color: $light-blue-color;
+    margin-bottom: 20px;
+}
+.lines p {
+    width: 73px;
+    height: 14px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.line{
+    width: 112px;
+    border: 1px solid $white-color;
+}
+
+/* Estilizaçao de login com Midias */
+
+.midias{
+    max-width: 140px;
+    display: flex;
+    font-size: 80px;
+    margin-right: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Estilizaçao do primeiro acesso */
+
+.first{
+    margin-top: 28px;
+    cursor: pointer;
+}
+.first a{
+    text-decoration: none;
+    color: $white-color;
+    border-bottom: 1px solid $white-color;
+    margin: 0px 12px;
+}
+
+
+/* recover password */ 
+/* so deve ser exibida ao clicar no botao esqueci a senha */
+
+.section-recover{
+    display: none;
+}
+
+.recoverPass{
+    width: 341.05px;
+    height: 286.33px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid $white-color;
+    background: $white-color;
+    padding: 20px;
+    position: relative;
+    top: 210px;
+    z-index: 1;
+}
+
+.recoverPass p {
+    font-size: 26px;
+    font-weight: 700;
+    color: $black-color;
+    margin: 0px auto;
+}
+.inputs-recover{
+    max-width: 301.05;
+    height: 246.33;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.inputs-recover label{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.inputs-recover input{
+    width: 299.81px;
+    height: 60px;
+    border: 1px solid $orange-color;
+    padding: 12px 28px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.inputs-recover button{
+    width: 301.05px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $white-color;
+    background: $orange-color;
+    cursor: pointer;
+}
+
+.rememberPass{
+    margin-top: 40px;
+}
+.rememberPass a{
+    font-size: 16px;
+    font-weight: 400;
+    color: $black-color;
+    text-decoration: none;
+    border-bottom: 1px solid $black-color;
+    cursor: pointer;
+}
+
+/* Estilizaçao da area de cadastro de usuario */
+/* Só deve ser exibida ao clicar no botao primeiro acesso*/
+
+.registration{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 30px;
+    
+}
+.form-Regist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    width: 369px;
+    gap: 20px;
+    position: relative;
+}   
+.form-Regist h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: $black-color;
+}
+.name, .senha, .confirmaçao, .Email{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.form-Regist label{
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 10px 10px 0px;
+    color: $black-color;
+
+}
+
+.form-Regist input{
+    padding: 15px 10px;
+    width: 369px;
+    border-radius: 10px;
+    border: 1px solid $orange-color;
+    border-color: $orange-color;
+}
+.form-Regist button{
+    background: $orange-color;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 600;
+    width: 369px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    margin: 20px 0px;
+}
+.lines-login{
+    max-width: 375px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    color: $black-color;
+    margin-bottom: 20px;
+}
+.lines-login p {
+    width: 73px;
+    height: 14px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.line-login{
+    width: 112px;
+    border: 1px solid $black-color;
+}
+.logar{
+    margin: 20px 0px;
+}
+.logar a{
+    font-size: 16px;
+    font-weight: 400;
+    color: $black-color;
+    text-decoration: none;
+    border-bottom: 1px solid $black-color;
+    cursor: pointer;
+}
+.mostarSenha{
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 173px;
+    cursor: pointer;
+    color: $secondy-color;
+}
+.confirSenha{
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 285px;
+    color: $secondy-color;
+    cursor: pointer;
+}

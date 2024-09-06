@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Nefropapers</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagem do cabeçalho de login -->
+        <div class="home-img">
+            <img src="./assets/image-removebg-preview 1 (1).png" alt="logo da Nefropapers">
+        </div>
+
+        <div class="logins">
+            <!-- login dos usuarios -->
+             <form action="" id="form" class="formulario">
+                <div class="log-inputs" id="log-inputs">
+                    <label for="email">Email</label>
+                    <input name="email" class="inputEmail" type="email" placeholder="Email" id="inputEmail" required>
+                    <label class="labelpass" for="senha">Sua senha</label>
+                    <input name="senha" class="inputPass" type="password" placeholder="Senha" id="inputPass" minlength="8" maxlength="12" required>
+                    <span onclick="showpass()" id="itempass" class="showPass"><i class="fa-regular fa-eye"></i></span>
+                </div>
+
+                <div class="check-inputs">
+
+                    <div class="checkbox">
+                        <input  type="checkbox">
+                        <a href="#">Lembrar senha</a>
+                    </div>
+
+                    <div class="href">
+                    <a href="#">Esqueci a senha</a>
+                    </div>
+
+                </div>
+
+            <button class="login-button">Entar</button>
+        </form>
+
+            <div class="lines">
+                <div class="line"></div>
+                <p>Entar com</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="midias">
+                <a href="#"><img src="./assets/google-logo.png" alt="logo do google"></a>
+                <a href="#"><img src="./assets/meta-logo.png" alt="logo do facebook/meta"></a>
+            </div>
+                
+            <div class="first">
+                <a href="">Primeiro acesso</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- sessão para recuperar senha -->
+    <section class="section-recover">
+        <div class="recoverPass">
+            <p>Esqueci a senha</p>
+                <div class="inputs-recover">
+                    <label for="email">Email</label>
+                    <input id="recoverPassword" type="email" placeholder="Coloque seu e-mail" required>
+                    <button id="recoverEmail">Enviar codigo</button>    
+                </div>
+                <div class="rememberPass">
+                    <a href="">Lembrou a senha? Entre aqui!</a>
+                </div>
+        </div>
+    </section>
+
+    <!-- sessão para cadastro de usuario -->
+
+    <section class="registration">
+            <h2>Criar Conta</h2>
+        <form class="form-Regist" id="form-Regist">
+                <div class="name">
+                    <label for="user">Nome completo</label>
+                    <input name="user" id="name" type="text" placeholder="Escreva seu nome completo" required>
+                </div>
+                <div class="senha">
+                    <label for="senha">Senha</label>
+                    <input name="senha" id="senha" type="password" placeholder="Escreva sua senha" minlength="8" maxlength="15"  required>
+                    <span onclick="" class="mostarSenha"><i class="fa-regular fa-eye"></i></span>
+                </div>
+                <div class="confirmaçao">
+                    <label for="confirmar">Confirmar Senha</label>
+                    <input name="confirmar" id="confirmaçaoSenha" type="password" placeholder="Repita sua senha" minlength="8" maxlength="15" required>
+                    <span onclick="" class="confirSenha"><i class="fa-regular fa-eye"></i></span>
+                </div>
+                <div class="Email">
+                    <label for="EMAIL">E-mail</label>
+                    <input name="EMAIL" id="Email" type="text" placeholder="Escreva seu email" required>
+                </div>
+
+                <button class="cadastro" id="cadastro">Criar Conta</button>
+        </form>
+
+        <div class="lines-login">
+            <div class="line-login"></div>
+            <p>Entar com</p>
+            <div class="line-login"></div>
+        </div>
+
+        <div class="midias">
+            <a href="#"><img src="./assets/google-logo.png" alt="logo do google"></a>
+            <a href="#"><img src="./assets/meta-logo.png" alt="logo do facebook/meta"></a>
+        </div>
+
+        <div class="logar">
+            <a href="">Já tem uma conta? Entar</a>
+        </div>
+
+    </section>
+
+    <!-- PERFIL DE INFORMAÇOES DO USUARIO -->
+    <section class="perfil do usuario">
+
+    </section>
+    <script src="./js/index.js"></script>
+</body>
+</html>
