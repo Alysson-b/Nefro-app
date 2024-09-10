@@ -36,7 +36,7 @@ body{
 }
 
 .container{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -86,10 +86,10 @@ body{
 }
 
 .showPass{
-    font-size: 24px;
+    font-size: 22px;
     position: absolute;
-    right: 38px;
-    top: 145px;
+    right: 40px;
+    top: 148px;
     cursor: pointer;
     color: $secondy-color;
 }
@@ -216,7 +216,7 @@ body{
     background: $white-color;
     padding: 20px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50px;
     animation:  bounce-in-bottom 0.8s ease-in ;
     transition: all 0.3s;
@@ -269,9 +269,9 @@ body{
 .rememberPass a{
     font-size: 16px;
     font-weight: 400;
-    color: $black-color;
+    color: $white-color;
     text-decoration: none;
-    border-bottom: 1px solid $black-color;
+    border-bottom: 1px solid $white-color;
     cursor: pointer;
 }
 
@@ -279,7 +279,7 @@ body{
 /* Só deve ser exibida ao clicar no botao primeiro acesso*/
 
 .registration{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -366,18 +366,18 @@ body{
     cursor: pointer;
 }
 .mostarSenha{
-    font-size: 24px;
+    font-size: 20px;
     position: absolute;
     right: 10px;
-    top: 173px;
+    top: 175px;
     cursor: pointer;
     color: $secondy-color;
 }
 .confirSenha{
-    font-size: 24px;
+    font-size: 20px;
     position: absolute;
     right: 10px;
-    top: 285px;
+    top: 286px;
     color: $secondy-color;
     cursor: pointer;
 }
