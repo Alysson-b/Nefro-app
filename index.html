@@ -11,7 +11,7 @@
     <div class="container">
         <!-- Imagem do cabeçalho de login -->
         <div class="home-img">
-            <img src="./assets/image-removebg-preview 1 (1).png" alt="logo da Nefropapers">
+            <img src="./assets/Nefropapers-logo.png" alt="logo da Nefropapers">
         </div>
 
         <div class="logins">
@@ -22,23 +22,25 @@
                     <input name="email" class="inputEmail" type="email" placeholder="Email" id="inputEmail" required>
                     <label class="labelpass" for="senha">Sua senha</label>
                     <input name="senha" class="inputPass" type="password" placeholder="Senha" id="inputPass" minlength="8" maxlength="12" required>
-                    <span onclick="showpass()" id="itempass" class="showPass"><i class="fa-regular fa-eye"></i></span>
+                    <span  id="itempass" class="showPass"><i class="fa-regular fa-eye"></i></span>
                 </div>
 
                 <div class="check-inputs">
 
                     <div class="checkbox">
-                        <input  type="checkbox">
-                        <a href="#">Lembrar senha</a>
+                        <label class="checkbox">
+                            <input id="inputCheck" type="checkbox">
+                            <span>Lembrar senha</span>
+                        </label>
                     </div>
 
                     <div class="href">
-                    <a href="#">Esqueci a senha</a>
+                    <a id="forgotPass" href="#">Esqueci a senha</a>
                     </div>
 
                 </div>
-
-            <button class="login-button">Entar</button>
+                <div class="messageError"></div>
+            <button type="submit" id="loginButton" class="login-button">Entar</button>
         </form>
 
             <div class="lines">
@@ -47,13 +49,21 @@
                 <div class="line"></div>
             </div>
 
-            <div class="midias">
-                <a href="#"><img src="./assets/google-logo.png" alt="logo do google"></a>
-                <a href="#"><img src="./assets/meta-logo.png" alt="logo do facebook/meta"></a>
-            </div>
+            <div class="midias" id="google_btn">
+
+         <!--            <a  id="hrefGoogle" href="" target="_blank">
+                        <img src="./assets/google-logo.png" alt="logo do google">
+                    </a>
+
+                    <a id="hrefMeta" href="#" target="_blank">
+                        <img src="./assets/meta-logo.png" alt="logo do facebook/meta">
+                    </a> -->
+
+                
+                </div>
                 
             <div class="first">
-                <a href="">Primeiro acesso</a>
+                <a id="firstHref" href="">Primeiro acesso</a>
             </div>
         </div>
     </div>
@@ -65,10 +75,10 @@
                 <div class="inputs-recover">
                     <label for="email">Email</label>
                     <input id="recoverPassword" type="email" placeholder="Coloque seu e-mail" required>
-                    <button id="recoverEmail">Enviar codigo</button>    
+                    <button id="recoverEmail" type="submit">Enviar codigo</button>    
                 </div>
                 <div class="rememberPass">
-                    <a href="">Lembrou a senha? Entre aqui!</a>
+                    <a id="hrefRemenber" href="">Lembrou a senha? Entre aqui!</a>
                 </div>
         </div>
     </section>
@@ -81,6 +91,7 @@
                 <div class="name">
                     <label for="user">Nome completo</label>
                     <input name="user" id="name" type="text" placeholder="Escreva seu nome completo" required>
+                    
                 </div>
                 <div class="senha">
                     <label for="senha">Senha</label>
@@ -96,8 +107,8 @@
                     <label for="EMAIL">E-mail</label>
                     <input name="EMAIL" id="Email" type="text" placeholder="Escreva seu email" required>
                 </div>
-
-                <button class="cadastro" id="cadastro">Criar Conta</button>
+                <div id="Error" class="messageError"></div>
+                <button class="cadastro" id="cadastro" type="submit">Criar Conta</button>
         </form>
 
         <div class="lines-login">
@@ -108,19 +119,22 @@
 
         <div class="midias">
             <a href="#"><img src="./assets/google-logo.png" alt="logo do google"></a>
-            <a href="#"><img src="./assets/meta-logo.png" alt="logo do facebook/meta"></a>
+            <a href="https://www.facebook.com/"><img src="./assets/meta-logo.png" alt="logo do facebook/meta"></a>
+        
         </div>
 
         <div class="logar">
-            <a href="">Já tem uma conta? Entar</a>
+            <a id="hrefLogar" href="">Já tem uma conta? Entar</a>
         </div>
 
     </section>
 
-    <!-- PERFIL DE INFORMAÇOES DO USUARIO -->
-    <section class="perfil do usuario">
-
-    </section>
+    <script src="./js/forms.js"></script>
     <script src="./js/index.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </body>
 </html>
+
+
+
+

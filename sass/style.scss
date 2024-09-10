@@ -40,6 +40,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }  
 
 /* Estilizaçao dos inputs de login da tela principal */
@@ -110,16 +111,26 @@ body{
     display: flex;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
 }
 .checkbox [type="checkbox"]{
     width: 22px;
     height: 22px;
     border: 2px solid $white-color;
-    border-radius: 6px;
-    appearance: none;
-    --webkit-appearance: none;
-    outline: none;
+    border-radius: 6px; 
+    appearance: none; 
+    --webkit-appearance: none; 
+     outline: none; 
+     cursor: pointer;
 }
+.checkbox span {
+    border-bottom: 1px solid $white-color;
+}
+.checkbox [type="checkbox"]:checked{
+    background-color: $orange-color;
+    border-color: $orange-color;
+}
+
 .check-inputs a{
     border-bottom: 1px solid $white-color;
     text-decoration: none;
@@ -165,10 +176,8 @@ body{
 /* Estilizaçao de login com Midias */
 
 .midias{
-    max-width: 140px;
     display: flex;
     font-size: 80px;
-    margin-right: 10px;
     gap: 10px;
     cursor: pointer;
 }
@@ -192,6 +201,8 @@ body{
 
 .section-recover{
     display: none;
+    align-items: center;
+    flex-direction: column;
 }
 
 .recoverPass{
@@ -204,9 +215,11 @@ body{
     border: 1px solid $white-color;
     background: $white-color;
     padding: 20px;
-    position: relative;
-    top: 210px;
-    z-index: 1;
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    animation:  bounce-in-bottom 0.8s ease-in ;
+    transition: all 0.3s;
 }
 
 .recoverPass p {
@@ -319,6 +332,7 @@ body{
     border-radius: 10px;
     border: none;
     margin: 20px 0px;
+    cursor: pointer;
 }
 .lines-login{
     max-width: 375px;
@@ -367,3 +381,49 @@ body{
     color: $secondy-color;
     cursor: pointer;
 }
+.form-Regist.error input{
+    border-color: $red-color;
+}
+.messageError p{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $red-color;
+    margin-top: 3px;
+}
+
+
+@keyframes bounce-in-bottom {
+    0% {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+    38% {
+            transform: translateY(0);
+            opacity: 0.3;
+    }
+    55% {
+              transform: translateY(65px);
+              opacity: 0.6;
+    }
+    72% {
+              transform: translateY(0);
+    }
+    81% {
+              transform: translateY(28px);
+              opacity: 0.6;
+    }
+    90% {
+              transform: translateY(0);
+    }
+    95% {
+              transform: translateY(8px);
+              opacity: 0.9;
+    }
+    100% {
+              transform: translateY(0);
+              opacity: 1;
+    }
+  }
+  
+  
