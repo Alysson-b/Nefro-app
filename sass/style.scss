@@ -37,7 +37,7 @@ body{
 }
 
 .container{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -397,7 +397,7 @@ body{
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
