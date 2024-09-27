@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     const recoverHref = document.querySelector('#hrefRemenber')
 
 
+    
+    const sectionCreatQuestion = document.querySelector('.create-question')
+    const editBtn = document.querySelector('.edit img')
+
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
     checkInputs();
@@ -69,6 +73,7 @@ lembrarSenha.addEventListener('click', (e) => {
     container.style.zIndex = '0'
     section2.style.zIndex = '1000'
     section2.style.display = 'flex'
+    
 })
 
 recoverHref.addEventListener('click', (e) =>{
@@ -78,6 +83,34 @@ recoverHref.addEventListener('click', (e) =>{
     container.style.display = 'flex'
 })
 
+loginButton.addEventListener('click', (e) =>{
+    e.preventDefault()
+    login();
+
+})
+
+editBtn.addEventListener('click', (e)=>{
+    e.preventDefault()
+
+    container.style.display = 'flex'
+    sectionCreatQuestion.style.display = 'none'
+
+})
+
+
+
+function  login(){
+    const loginEmailValue = loginEmail.value.trim()
+    const loginPassValue = loginPass.value.trim()
+
+    if(loginEmailValue === "" || loginPassValue === ""){
+        alert('campos obrigatorios')
+    }else{
+        container.style.display = 'none'
+        sectionCreatQuestion.style.display = 'flex'
+    }
+
+}
 function checkInputs(){
 
     const userNameValue = userName.value.trim();

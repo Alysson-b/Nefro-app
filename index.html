@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/style.css">
     <title>Nefropapers</title>
 </head>
@@ -129,8 +130,270 @@
 
     </section>
 
+     <!-- sessão para criar as questões do quiz -->
+    <section class="create-question">
+
+        <div class="prepare-question">
+            <div class="edit">
+                <span><img src="./assets/seta-esquerda.png" alt=""></span>
+                <p>Editar questão</p>
+            </div>
+
+            <div class="edit-questao">
+                <label for="Questao">Questao 1 <span><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span></label>
+                    <div class="area-text">
+                        <textarea name="Questao" id="textQuest" placeholder="Enuciado..."></textarea>
+                        <span class="text-icon"><i class='bx bxs-pencil' style='color:#b6b6b6'></i></span>
+                    </div>   
+            </div>
+
+            <div class="filter-question">
+                
+                <label class="label-filter" for="">Categoria</label>
+                
+                <div class="search">
+                    <input type="text" placeholder="Procurar questão">
+                    <span><i class='bx bx-search' ></i></span>
+                </div>
+
+                <div class="categoria">
+                    <div class="group"><p>Categoria 1 <span><i class='bx bx-x'></i></span></p></div>
+                    <div class="group"><p>Categoria 2 <span><i class='bx bx-x'></i></span></p></div>
+                    <div class="group"><p>Categoria 3 <span><i class='bx bx-x'></i></span></p></div>
+                </div>
+
+                <div class="gabarito">
+                    <button class="gab-btn1"><span><i class='bx bx-file'></i></span>Fazer gabarito</button>
+                    <button class="gab-btn2"><span><i class='bx bx-upload' ></i></span>imagem</button>
+                </div>
+        </div>
+
+        <div class="questions">
+
+                <div class="question">
+                    <label for="">A</label>
+
+                <div class="input-question">
+                    <input type="text" placeholder="loren ipsum">
+                    <span class="icon-question"><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span>
+                </div>
+                <div class="check-question">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+            </div>
+
+                <div class="question">
+
+                    <label for="">B</label>
+                <div class="input-question">
+                    <input type="text" placeholder="loren ipsum">
+                    <span class="icon-question"><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span>
+            </div>
+                
+            <div class="check-question">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                </div>
+            </div>
+                
+                <div class="question">
+                    <label for="">C</label>
+                <div class="input-question">
+                    <input type="text" placeholder="loren ipsum">
+                    <span class="icon-question"><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span>
+                </div>
+                <div class="check-question">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                </div>
+                
+                <div class="question">
+                    <label for="">D</label>
+                <div class="input-question">
+                    <input type="text" placeholder="loren ipsum">
+                    <span class="icon-question"><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span>
+                </div>
+                
+                <div class="check-question">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                </div>
+                
+                <div class="question">
+                    <label for="">E</label>
+                <div class="input-question">
+                    <input type="text" placeholder="loren ipsum">
+                    <span class="icon-question"><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span>
+                </div>
+                <div class="check-question">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="itemX">
+            <p>item <strong>X</strong><span><i class='bx bxs-pencil' style='color:#b6b6b6'></i></span></p>
+            <button><span><i class='bx bx-upload' ></i></span>Video explicaçao</button>
+        </div>
+        <div class="Explication">
+           <label for="">Explicação</label>
+           <textarea class="explication-text">
+            </textarea>
+        </div>
+
+        <div id="msgError"></div>
+
+        <div class="saveBtn" >
+            <button>Salvar</button>
+        </div>
+    
+   </section>
+
+    <!-- sessão de historico do usuario -->
+
+   <section class="historico">
+    <div class="edit">
+        <span><img src="./assets/seta-esquerda.png" alt=""></span>
+        <p>Histórico</p>
+    </div>
+
+    <div class="search-list">
+        <input list="list" id="search-list" placeholder="Últimos 7 dias">
+        <datalist id="list">
+            <option value="1 dias"></option>
+            <option value="3 dias"></option>
+            <option value="7 dias"></option>
+            <option value="14 dias"></option>
+        </datalist>
+    </div>
+    <p class="textResult">Últimos testes</p>
+
+    <div class="result">
+        <div class="historical">
+            <div class="img-historical">
+                <img src="https://www.redeicm.org.br/madrebarbara/wp-content/uploads/sites/12/2018/11/CGABARITO.jpg" alt="">
+            </div>
+           <div class="text-historical">
+                <h2>Teste 1</h2>
+                <p>50% de acerto</p>
+            </div>   
+            <div class="subText-historical">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>  
+            </div>
+            <div class="icon-historical">
+                <span><i class="fa-regular fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+        <div class="historical">
+            <div class="img-historical">
+                <img src="https://provafacilnaweb.com.br/wp-content/uploads/2020/11/leitor-de-gabarito-de-provas-o-que-e-e-como-funciona-3-2048x1365-1.jpg" alt="">
+            </div>
+           <div class="text-historical">
+                <h2>Teste 2</h2>
+                <p>50% de acerto</p>
+            </div>   
+            <div class="subText-historical">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>  
+            </div>
+            <div class="icon-historical">
+                <span><i class="fa-regular fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+        <div class="historical">
+            <div class="img-historical">
+                <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3313916:1671446099/concurso-publico.jpg?f=4x3&$p$f=ebf9819" alt="">
+            </div>
+           <div class="text-historical">
+                <h2>Teste 3</h2>
+                <p>50% de acerto</p>
+            </div>   
+            <div class="subText-historical">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>  
+            </div>
+            <div class="icon-historical">
+                <span><i class="fa-regular fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+        <div class="historical">
+            <div class="img-historical">
+                <img src="https://roraimaemtempo.com.br/wp-content/uploads/2021/08/vestibular-2-860x573.jpg" alt="">
+            </div>
+           <div class="text-historical">
+                <h2>Teste 4</h2>
+                <p>50% de acerto</p>
+            </div>   
+            <div class="subText-historical">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>  
+            </div>
+            <div class="icon-historical">
+                <span><i class="fa-regular fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+        <div class="historical">
+            <div class="img-historical">
+                <img src="https://www.reporterdiario.com.br/wp-content/uploads/2023/12/Camara-dos-Deputados-abre-inscricoes-para-concurso-com-salario-de-ate-R-34-mil-1200x800-1-e1703623255710.png" alt="">
+            </div>
+           <div class="text-historical">
+                <h2>Teste 5</h2>
+                <p>50% de acerto</p>
+            </div>   
+            <div class="subText-historical">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>  
+            </div>
+            <div class="icon-historical">
+                <span><i class="fa-regular fa-heart"></i></span>
+            </div>
+        </div>
+    </div>
+   </section>
+
     <script src="./js/forms.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/adm.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </body>
 </html>
