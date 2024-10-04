@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const recoverInput = document.querySelector('#recoverPassword')
     const recoverButton = document.querySelector('#recoverEmail')
     const recoverHref = document.querySelector('#hrefRemenber')
+    const body = document.querySelector('body')
 
 
     
@@ -70,9 +71,9 @@ loginFirst.addEventListener('click', (e) => {
 lembrarSenha.addEventListener('click', (e) => {
     e.preventDefault();
 
-    container.style.zIndex = '0'
-    section2.style.zIndex = '1000'
+    container.style.visibility = 'hidden'
     section2.style.display = 'flex'
+    body.style.backGroundColor = "blue"
     
 })
 

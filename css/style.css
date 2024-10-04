@@ -9,7 +9,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
   font-family: "Inter", sans-serif;
 }
 
@@ -192,10 +191,13 @@ body {
   display: none;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  overflow: hidden;
 }
 
 .recoverPass {
-  width: 341.05px;
+  width: 100%;
   height: 286.33px;
   display: flex;
   align-items: center;
@@ -203,12 +205,11 @@ body {
   border-radius: 10px;
   border: 1px solid #fff;
   background: #fff;
-  padding: 20px;
   position: absolute;
-  top: 45%;
-  left: 50px;
+  right: 0;
+  bottom: 20px;
   animation: bounce-in-bottom 0.8s ease-in;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .recoverPass p {
@@ -263,7 +264,7 @@ body {
 .rememberPass a {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #858585;
   text-decoration: none;
   border-bottom: 1px solid #fff;
   cursor: pointer;
@@ -404,10 +405,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .edit {
-  width: 430px;
+  width: 100%;
+  max-width: 100%;
   height: 100px;
   padding: 8px;
   border-radius: 27px;
@@ -439,17 +442,22 @@ body {
   flex-direction: column;
   background: #fff;
   border-radius: 10px;
-  padding: 0px 15px;
+  width: 100%;
 }
 
 .edit-questao {
   display: flex;
   flex-direction: column;
-  width: 339px;
+  align-items: center;
+  flex: 1;
+  width: 100%;
   margin: 25px 0px;
 }
 
 .edit-questao label {
+  display: flex;
+  text-align: start;
+  align-items: flex-start;
   font-size: 20px;
   font-weight: bold;
   color: #04345A;
@@ -457,16 +465,14 @@ body {
 }
 
 .edit-questao textarea {
-  max-width: 339px;
-  min-width: 339px;
-  max-height: 81px;
-  min-height: 81px;
-  padding: 8px;
+  max-width: 1024px;
+  max-height: auto;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 400;
   background: #efefef;
   border-color: #ff9600;
+  padding: 8px 0px;
 }
 
 .area-text {
@@ -501,14 +507,15 @@ body {
 }
 
 .search input {
-  width: 339px;
+  max-width: 100%;
+  width: 100%;
   height: 46px;
   border-radius: 10px;
   border: 1px solid #ff9600;
-  padding: 0px 29px;
   font-size: 18px;
   font-weight: 400;
   color: #858585;
+  padding: 0px 29px;
 }
 
 .search span {
@@ -523,8 +530,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 
 .group {
@@ -594,12 +601,13 @@ body {
 }
 
 .questions {
-  margin: 50px 0px 20px;
+  margin: 50px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  max-width: 100%;
 }
 
 .question {
@@ -607,10 +615,10 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  width: 369px;
+  width: 100%;
+  max-width: 100%;
   height: 72px;
   border-radius: 10px;
-  padding: 20px;
   gap: 20px;
 }
 
