@@ -71,9 +71,8 @@ loginFirst.addEventListener('click', (e) => {
 lembrarSenha.addEventListener('click', (e) => {
     e.preventDefault();
 
-    container.style.visibility = 'hidden'
+    container.style.display = 'none'
     section2.style.display = 'flex'
-    body.style.backGroundColor = "blue"
     
 })
 
