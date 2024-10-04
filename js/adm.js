@@ -12,6 +12,13 @@ const explicationText = document.querySelector('.explication-text')
 const switchCheck = document.querySelectorAll('.switch input')
 const divError = document.getElementById('msgError')
 
+
+const btnGabarito = document.querySelector('.gab-btn1')
+const editQuestion = document.querySelector(".edit-questao")
+const filterQuestion = document.querySelector('.filter-question')
+const divQuestions = document.querySelector('.questions')
+const subSection = document.querySelector(".subSection")
+
 function Questao() {
     questions.questoes = textArea.value
     questionInput.forEach((input, index) => {
@@ -71,3 +78,14 @@ questionSaveBtn.addEventListener('click', () =>{
 })
 
 respostaCorreta();
+
+btnGabarito.addEventListener('click', function(event){
+    event.preventDefault()
+
+    editQuestion.style.display = 'none'
+    divQuestions.style.display = 'none'
+    filterQuestion.style.display = 'none'
+    subSection.style.display = 'flex'
+
+
+})

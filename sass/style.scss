@@ -27,7 +27,6 @@ $backgound-linear: #004B87, #04345A;
 body{
     @include flex-center();
     background-color: $white-color;
-    overflow-x: hidden;
     font-family: $font-family;
 }
 .home-img img{
@@ -37,11 +36,12 @@ body{
 }
 
 .container{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    width: 100%;
 }  
 
 /* Estilizaçao dos inputs de login da tela principal */
@@ -62,10 +62,8 @@ body{
 
 }
 .log-inputs{
-    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0px 28px;
     gap: 10px;
     color: $light-blue-color;
     font-size: 16px;
@@ -79,7 +77,7 @@ body{
 .log-inputs input{
     font-size: 16px;
     font-weight: 400;
-    width: 375px;
+    width: 24rem;
     height: 60px;
     padding: 15px 10px;
     border-radius: 10px;
@@ -89,7 +87,7 @@ body{
 .showPass{
     font-size: 22px;
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 148px;
     cursor: pointer;
     color: $secondy-color;
@@ -99,13 +97,12 @@ body{
 
 
 .check-inputs{
-    max-width: 375px;
+    max-width: 23rem;
     height: 42px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0px 8px;
     font-size: 16px;
 }
 .checkbox{
@@ -142,7 +139,8 @@ body{
 
 .login-button{
     margin: 30px 0px;
-    width: 376.55px;
+    max-width: 23rem;
+    width: 100%;
     height: 60px;
     border: none;
     border-radius: 10px;
@@ -154,23 +152,20 @@ body{
 
 /* Estilizaçao do rodapé de login */
 .lines{
-    max-width: 375px;
+    max-width: 22em;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px;
     color: $light-blue-color;
     margin-bottom: 20px;
 }
 .lines p {
-    width: 73px;
-    height: 14px;
     font-size: 14px;
     font-weight: 400;
 }
 .line{
-    width: 112px;
+    width: 28%;
     border: 1px solid $white-color;
 }
 
@@ -186,14 +181,18 @@ body{
 /* Estilizaçao do primeiro acesso */
 
 .first{
-    margin-top: 28px;
+    margin-top: 25px;
     cursor: pointer;
 }
 .first a{
     text-decoration: none;
     color: $white-color;
     border-bottom: 1px solid $white-color;
-    margin: 0px 12px;
+    margin: 0px 15px;
+}
+
+#buttonDiv{
+    display: none;
 }
 
 
@@ -397,7 +396,7 @@ body{
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -418,7 +417,7 @@ body{
     font-size: 20px;
     color: $white-color;
     font-weight: bold;
-    margin: 29px 15px 0px 0px;
+    margin-top: 29px;
 }
 .edit img{
     margin-top: 29px;
@@ -672,17 +671,12 @@ body{
     transform: translateX(1.5em);
   }
 
-/* Tela EXCLUSIVA DO ADM */
-/* Estilizaçao da tela de gabarito */
 
-
-.create-template{
+.subSection{
     display: none;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    background-color: $gray-color;
-    gap: 25px;
+    animation: slide-top 2s ease ;
+    align-items: center;
 }
 .itemX{
     display: flex;
@@ -870,9 +864,6 @@ body{
 }
 
 
-
-
-
 @keyframes bounce-in-bottom {
     0% {
         transform: translateX(200px);
@@ -904,6 +895,13 @@ body{
               transform: translateX(0);
               opacity: 1;
     }
-  }
-  
-  
+ }
+
+@keyframes slide-top{
+    to{
+        transform: translateY(0);
+    }
+    from{
+        transform: translateY(100px);
+    }
+}

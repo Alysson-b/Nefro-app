@@ -238,23 +238,4 @@ function togglePassword(input, icon) {
     }
 }
 
-/* funçao para respose do google */
-
-window.handleCredentialResponse = (response) =>{
-    console.log('ID Token:', response.credential)
-
-}
-
-
-window.onload = function () {
-    google.accounts.id.initialize({
-      client_id: '209104012971-3v08qrfpub4kctonej8jc6lnunse8fl7.apps.googleusercontent.com',
-      callback: handleCredentialResponse
-    });
-    const parent = document.getElementById('google_btn');
-    google.accounts.id.renderButton(parent, {theme: "filled_blue"});
-    google.accounts.id.prompt();
-}
-
 })
-
