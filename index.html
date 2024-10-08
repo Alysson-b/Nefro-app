@@ -9,6 +9,11 @@
     <title>Nefropapers</title>
 </head>
 <body>
+    <!-- tela de entrada do app -->
+    <div id="inputScreen"><img src="./assets/Nefropapers-logo.png" alt=""></div>
+    
+    <!-- tela de login do usuario -->
+    <div id="main_container">
     <div class="container">
         <!-- Imagem do cabeçalho de login -->
         <div class="home-img">
@@ -46,7 +51,7 @@
 
             <div class="lines">
                 <div class="line"></div>
-                <p>Entar com</p>
+                <p>Entrar com</p>
                 <div class="line"></div>
             </div>
 
@@ -112,7 +117,7 @@
 
         <div class="lines-login">
             <div class="line-login"></div>
-            <p>Entar com</p>
+            <p>Entrar com</p>
             <div class="line-login"></div>
         </div>
 
@@ -131,17 +136,21 @@
      <!-- sessão para criar as questões do quiz -->
     <section class="create-question">
 
+
         <div class="prepare-question">
             <div class="edit">
                 <span><img src="./assets/seta-esquerda.png" alt=""></span>
                 <p>Editar questão</p>
             </div>
 
+            <div class="questionContainer">
             <div class="edit-questao">
-                <label for="Questao">Questao 1 <span><i class='bx bxs-pencil' style='color:#b6b6b6'  ></i></span></label> 
+                <div class="labeltext">
+                <label for="Questao">Questao 1 <span><i class='bx bxs-pencil'></i></span></label> 
+             </div>
                 <div class="area-text">
-                        <textarea rows="5" cols="41" name="Questao" id="textQuest" placeholder="Enuciado..."></textarea>
-                        <span class="text-icon"><i class='bx bxs-pencil' style='color:#b6b6b6'></i></span>
+                        <textarea name="Questao" id="textQuest" placeholder="Enuciado..."></textarea>
+                        <span class="text-icon"><i class='bx bxs-pencil'></i></span>
                     </div>   
             </div>
 
@@ -165,6 +174,7 @@
                     <button class="gab-btn2"><span><i class='bx bx-upload' ></i></span>imagem</button>
                 </div>
         </div>
+    </div>
 
         <div class="questions">
 
@@ -252,8 +262,7 @@
         </div>
         <div class="Explication">
            <label for="">Explicação</label>
-           <textarea class="explication-text">
-            </textarea>
+           <textarea class="explication-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
         </div>
 
         <div id="msgError"></div>
@@ -262,12 +271,11 @@
             <button>Salvar</button>
         </div>
     </div>
-    
    </section>
 
     <!-- sessão de historico do usuario -->
 
-   <section class="historico">
+   <section class="historico" id="historico">
     <div class="edit">
         <span><img src="./assets/seta-esquerda.png" alt=""></span>
         <p>Histórico</p>
@@ -390,6 +398,10 @@
         </div>
     </div>
    </section>
+
+
+
+</div>
 
     <script src="./js/forms.js"></script>
     <script src="./js/index.js"></script>

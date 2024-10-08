@@ -14,6 +14,7 @@ function handleCredentialResponse(response) {
     document.getElementById("hrefGoogle").onclick = function(event){
         event.preventDefault()
         console.log('botao google clicado')
-    google.accounts.id.prompt(); // also display the One Tap dialog
+    google.accounts.id.prompt(); 
   }
 }
+

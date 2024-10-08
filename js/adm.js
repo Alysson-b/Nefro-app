@@ -18,6 +18,7 @@ const editQuestion = document.querySelector(".edit-questao")
 const filterQuestion = document.querySelector('.filter-question')
 const divQuestions = document.querySelector('.questions')
 const subSection = document.querySelector(".subSection")
+const questionContainer = document.querySelector(".questionContainer")
 
 function Questao() {
     questions.questoes = textArea.value
@@ -85,6 +86,7 @@ btnGabarito.addEventListener('click', function(event){
     editQuestion.style.display = 'none'
     divQuestions.style.display = 'none'
     filterQuestion.style.display = 'none'
+    questionContainer.style.display = 'none'
     subSection.style.display = 'flex'
 
 

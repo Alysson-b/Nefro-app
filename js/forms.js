@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     
     const sectionCreatQuestion = document.querySelector('.create-question')
-    const editBtn = document.querySelector('.edit img')
+    const editBtn = document.querySelectorAll('.edit img')
+    const editHistBtn = document.getElementById('historico')
 
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
@@ -94,10 +95,25 @@ editBtn.addEventListener('click', (e)=>{
 
     container.style.display = 'flex'
     sectionCreatQuestion.style.display = 'none'
+    editHistBtn.style.display = 'none'
 
 })
 
+window.onload = function () {
+    setTimeout(function () {
+        const mainContainer = document.getElementById('main_container')
+        const inputScreen = document.getElementById('.inputScreen')
 
+        inputScreen.style.transition = 'opacity 0.5s ease-out';
+        inputScreen.style.opacity = 0;
+
+        setTimeout(() =>{
+            inputScreen.style.display = 'none'
+        }, 500)
+
+        mainContainer.style.display = 'flex'
+    }, 500); 
+  };
 
 function  login(){
     const loginEmailValue = loginEmail.value.trim()
