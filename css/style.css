@@ -193,9 +193,18 @@
 /* Estilizaçao de login com Midias */
 .midias {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 80px;
   gap: 10px;
   cursor: pointer;
+}
+
+.midias a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Estilizaçao do primeiro acesso */
@@ -1040,6 +1049,55 @@
   }
   from {
     transform: translateY(100px);
+  }
+}
+@media (max-width: 320px) {
+  #main_container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .home-img img {
+    width: 200px;
+    height: auto;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .logins {
+    height: 90vh;
+  }
+  .formulario {
+    width: 90%;
+  }
+  .log-inputs {
+    width: 100%;
+    font-size: 12px;
+  }
+  .log-inputs input {
+    max-width: 100%;
+    height: 60%;
+  }
+  .log-inputs .labelpass {
+    font-size: 12px;
+  }
+  .log-inputs .showPass {
+    top: 122px;
+  }
+  .check-inputs {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  .login-button {
+    height: 70%;
+  }
+  .lines {
+    width: 85%;
+  }
+  .midias .glg, .meta {
+    width: 70%;
   }
 }
 
