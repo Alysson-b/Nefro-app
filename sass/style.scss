@@ -27,7 +27,7 @@ $backgound-linear: #004B87, #04345A;
     @include flex-center();
     font-family: $font-family;
     background: linear-gradient(320deg,$white-color, $white-color,$white-color, #faefe0);
-    overflow: hidden;
+    overflow: auto;
 }
 #inputScreen{
     display: none;
