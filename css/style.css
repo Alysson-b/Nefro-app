@@ -50,13 +50,11 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
 }
 
 .logins {
   margin: 20px 0px 0px;
   width: 100%;
-  height: 100vh;
   background: linear-gradient(to top, #04345A, #04345A, #00679A);
   display: flex;
   align-items: center;
@@ -1068,16 +1066,13 @@
   .container {
     max-width: 100%;
   }
-  .logins {
-    height: 90vh;
-    padding: 12px 0px;
-  }
   .formulario {
     width: 90%;
   }
   .log-inputs {
     width: 100%;
     font-size: 12px;
+    padding: 14px 0px;
   }
   .log-inputs input {
     max-width: 100%;
@@ -1154,7 +1149,6 @@
     max-width: 100%;
   }
   .logins {
-    height: 98vh;
     padding: 14px 0px;
   }
   .formulario {
@@ -1163,6 +1157,7 @@
   .log-inputs {
     width: 100%;
     font-size: 14px;
+    padding: 14px 0px;
   }
   .log-inputs input {
     max-width: 100%;
