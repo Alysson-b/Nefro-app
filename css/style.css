@@ -11,6 +11,7 @@
   justify-content: center;
   font-family: "Inter", sans-serif;
   background: linear-gradient(320deg, #fff, #fff, #fff, #faefe0);
+  overflow: hidden;
 }
 
 #inputScreen {
@@ -30,8 +31,8 @@
 
 .home-img img {
   margin: 20px 0px;
-  width: 250px;
-  height: 150px;
+  width: 200px;
+  height: auto;
 }
 
 .container {
@@ -48,12 +49,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
 
 .logins {
   margin: 20px 0px 0px;
   width: 100%;
-  height: 562px;
+  height: 100vh;
   background: linear-gradient(to top, #04345A, #04345A, #00679A);
   display: flex;
   align-items: center;
@@ -61,9 +64,11 @@
   flex-direction: column;
   border-radius: 30px 30px 0px 0px;
   color: #fff;
+  padding: 30px 15px 0px;
 }
 
 .log-inputs {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -81,7 +86,7 @@
 .log-inputs input {
   font-size: 16px;
   font-weight: 400;
-  width: 24rem;
+  width: 100%;
   height: 60px;
   padding: 15px 10px;
   border-radius: 10px;
@@ -89,7 +94,7 @@
   border-color: #ff9600;
 }
 
-.showPass {
+.showPass i {
   font-size: 22px;
   position: absolute;
   right: 20px;
@@ -100,7 +105,7 @@
 
 /* Estilizaçao da checkbox e esqueci senha */
 .check-inputs {
-  max-width: 23rem;
+  width: 100%;
   height: 42px;
   display: flex;
   align-items: center;
@@ -158,7 +163,6 @@
 /* Estilizaçao do button de login */
 .login-button {
   margin: 30px 0px;
-  max-width: 23rem;
   width: 100%;
   height: 60px;
   border: none;
@@ -195,7 +199,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
   gap: 10px;
   cursor: pointer;
 }
@@ -205,11 +208,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 10px;
 }
 
 /* Estilizaçao do primeiro acesso */
 .first {
-  margin-top: 25px;
+  margin-top: 20px;
   cursor: pointer;
 }
 
@@ -217,7 +221,6 @@
   text-decoration: none;
   color: #fff;
   border-bottom: 1px solid #fff;
-  margin: 0px 15px;
 }
 
 #buttonDiv {
@@ -256,7 +259,7 @@
   font-size: 26px;
   font-weight: 700;
   color: #000;
-  margin: 5px auto;
+  margin: 15px auto;
 }
 
 .inputs-recover {
@@ -330,7 +333,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 10px 15px;
-  width: 369px;
+  width: 100%;
   gap: 20px;
   position: relative;
 }
@@ -345,6 +348,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
 }
 
 .form-Regist label {
@@ -356,7 +360,7 @@
 
 .form-Regist input {
   padding: 15px 10px;
-  width: 369px;
+  width: 100%;
   border-radius: 10px;
   border: 1px solid #ff9600;
   border-color: #ff9600;
@@ -367,7 +371,7 @@
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-  width: 369px;
+  width: 100%;
   height: 60px;
   border-radius: 10px;
   border: none;
@@ -414,7 +418,7 @@
 .mostarSenha {
   font-size: 20px;
   position: absolute;
-  right: 10px;
+  right: 40px;
   top: 175px;
   cursor: pointer;
   color: #00679A;
@@ -423,7 +427,7 @@
 .confirSenha {
   font-size: 20px;
   position: absolute;
-  right: 10px;
+  right: 40px;
   top: 286px;
   color: #00679A;
   cursor: pointer;
@@ -1052,22 +1056,21 @@
   }
 }
 @media (max-width: 320px) {
+  /* Responsividade da tela de login */
   #main_container {
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
-  .home-img img {
-    width: 200px;
-    height: auto;
+    overflow: hidden;
   }
   .container {
     max-width: 100%;
   }
   .logins {
     height: 90vh;
+    padding: 12px 0px;
   }
   .formulario {
     width: 90%;
@@ -1083,8 +1086,9 @@
   .log-inputs .labelpass {
     font-size: 12px;
   }
-  .log-inputs .showPass {
-    top: 122px;
+  .showPass i {
+    top: 130px;
+    font-size: 100px;
   }
   .check-inputs {
     margin-top: 8px;
@@ -1097,6 +1101,127 @@
     width: 85%;
   }
   .midias .glg, .meta {
+    width: 70%;
+  }
+  /* Responsividade da tela de cadastro */
+  .form-Regist label {
+    font-size: 16px;
+  }
+  .mostarSenha {
+    top: 165px;
+    right: 30px;
+  }
+  .confirSenha {
+    top: 268px;
+    right: 30px;
+  }
+  .lines-login {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 10px;
+  }
+  .lines-login p {
+    font-size: 12px;
+    margin-left: 16px;
+  }
+  .line-login {
+    width: 30%;
+    display: flex;
+  }
+  .form-Regist button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+  .midias img {
+    width: 70%;
+  }
+}
+@media (max-width: 375px) {
+  /* Responsividade da tela de login */
+  #main_container {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .logins {
+    height: 98vh;
+    padding: 14px 0px;
+  }
+  .formulario {
+    width: 90%;
+  }
+  .log-inputs {
+    width: 100%;
+    font-size: 14px;
+  }
+  .log-inputs input {
+    max-width: 100%;
+    height: 60%;
+  }
+  .log-inputs .labelpass {
+    font-size: 14px;
+  }
+  .showPass i {
+    top: 130px;
+    font-size: 18px;
+  }
+  .check-inputs {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  .login-button {
+    height: 50px;
+  }
+  .lines {
+    width: 85%;
+  }
+  .midias .glg, .meta {
+    width: 70%;
+  }
+  /* Responsividade da tela de cadastro */
+  .form-Regist label {
+    font-size: 16px;
+  }
+  .mostarSenha {
+    top: 165px;
+    right: 30px;
+  }
+  .confirSenha {
+    top: 268px;
+    right: 30px;
+  }
+  .lines-login {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 10px;
+  }
+  .lines-login p {
+    font-size: 12px;
+    margin-left: 16px;
+  }
+  .line-login {
+    width: 30%;
+    display: flex;
+  }
+  .form-Regist button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+  .midias img {
     width: 70%;
   }
 }

@@ -27,6 +27,7 @@ $backgound-linear: #004B87, #04345A;
     @include flex-center();
     font-family: $font-family;
     background: linear-gradient(320deg,$white-color, $white-color,$white-color, #faefe0);
+    overflow: hidden;
 }
 #inputScreen{
     display: none;
@@ -43,8 +44,8 @@ $backgound-linear: #004B87, #04345A;
 }
 .home-img img{
     margin: 20px 0px;
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: auto;
 }
 
 .container{
@@ -61,19 +62,24 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    
 }
 .logins{
     margin: 20px 0px 0px;
     width: 100%;
-    height: 562px;
+    height: 100vh;
     background: linear-gradient(to top, $prymary-color, $prymary-color, $secondy-color);
     @include flex-center();
     flex-direction: column;
     border-radius: 30px 30px 0px 0px;
     color: $white-color;
+    padding: 30px 15px 0px;
 
 }
 .log-inputs{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -89,7 +95,7 @@ $backgound-linear: #004B87, #04345A;
 .log-inputs input{
     font-size: 16px;
     font-weight: 400;
-    width: 24rem;
+    width: 100%;
     height: 60px;
     padding: 15px 10px;
     border-radius: 10px;
@@ -97,7 +103,7 @@ $backgound-linear: #004B87, #04345A;
     border-color: $orange-color;
 }
 
-.showPass{
+.showPass i{
     font-size: 22px;
     position: absolute;
     right: 20px;
@@ -106,11 +112,12 @@ $backgound-linear: #004B87, #04345A;
     color: $secondy-color;
 }
 
+
 /* Estilizaçao da checkbox e esqueci senha */
 
 
 .check-inputs{
-    max-width: 23rem;
+    width: 100%;
     height: 42px;
     display: flex;
     align-items: center;
@@ -163,7 +170,6 @@ $backgound-linear: #004B87, #04345A;
 
 .login-button{
     margin: 30px 0px;
-    max-width: 23rem;
     width: 100%;
     height: 60px;
     border: none;
@@ -199,7 +205,6 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 80px;
     gap: 10px;
     cursor: pointer;
 }
@@ -208,20 +213,20 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 10px;
 }
 
 
 /* Estilizaçao do primeiro acesso */
 
 .first{
-    margin-top: 25px;
+    margin-top: 20px;
     cursor: pointer;
 }
 .first a{
     text-decoration: none;
     color: $white-color;
     border-bottom: 1px solid $white-color;
-    margin: 0px 15px;
 }
 
 #buttonDiv{
@@ -263,7 +268,7 @@ $backgound-linear: #004B87, #04345A;
     font-size: 26px;
     font-weight: 700;
     color: $black-color;
-    margin: 5px auto;
+    margin: 15px auto;
 }
 .inputs-recover{
     max-width: 301.05;
@@ -333,7 +338,7 @@ $backgound-linear: #004B87, #04345A;
     justify-content: center;
     flex-direction: column;
     padding: 10px 15px;
-    width: 369px;
+    width: 100%;
     gap: 20px;
     position: relative;
 }   
@@ -346,6 +351,7 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
 }
 .form-Regist label{
     font-weight: 400;
@@ -357,7 +363,7 @@ $backgound-linear: #004B87, #04345A;
 
 .form-Regist input{
     padding: 15px 10px;
-    width: 369px;
+    width: 100%;
     border-radius: 10px;
     border: 1px solid $orange-color;
     border-color: $orange-color;
@@ -367,7 +373,7 @@ $backgound-linear: #004B87, #04345A;
     color: $white-color;
     font-size: 20px;
     font-weight: 600;
-    width: 369px;
+    width: 100%;
     height: 60px;
     border-radius: 10px;
     border: none;
@@ -408,7 +414,7 @@ $backgound-linear: #004B87, #04345A;
 .mostarSenha{
     font-size: 20px;
     position: absolute;
-    right: 10px;
+    right: 40px;
     top: 175px;
     cursor: pointer;
     color: $secondy-color;
@@ -416,7 +422,7 @@ $backgound-linear: #004B87, #04345A;
 .confirSenha{
     font-size: 20px;
     position: absolute;
-    right: 10px;
+    right: 40px;
     top: 286px;
     color: $secondy-color;
     cursor: pointer;
@@ -1011,24 +1017,23 @@ $backgound-linear: #004B87, #04345A;
 }
 
 
-@media (max-width: 320px){
+@media (max-width: 320px ){
    
+    /* Responsividade da tela de login */
    #main_container{
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-   }
-   .home-img img{
-    width: 200px;
-    height: auto;
+    overflow: hidden;
    }
    .container{
     max-width: 100%;
    }
    .logins{
     height: 90vh;
+    padding: 12px 0px;
    }
    .formulario{
     width: 90%;
@@ -1044,8 +1049,9 @@ $backgound-linear: #004B87, #04345A;
    .log-inputs .labelpass{
     font-size: 12px;
    }
-   .log-inputs .showPass{
-    top: 122px;
+   .showPass i{
+    top: 130px;
+    font-size: 100px;
    }
    .check-inputs{
     margin-top: 8px;
@@ -1060,4 +1066,135 @@ $backgound-linear: #004B87, #04345A;
    .midias .glg, .meta{
     width: 70%;
    }
+
+   /* Responsividade da tela de cadastro */
+
+   .form-Regist label{
+        font-size: 16px;
+   }
+   .mostarSenha{
+    top: 165px;
+    right: 30px;
+   }
+   .confirSenha{
+    top: 268px;
+    right: 30px;
+   }
+   .lines-login{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 10px;
+   }
+   .lines-login p{
+    font-size: 12px;
+    margin-left: 16px;
+   }
+   .line-login{
+    width: 30%;
+    display: flex;
+   }
+   .form-Regist button{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+   }
+   .midias img{
+        width: 70%;
+    }
+
+  
 }
+@media (max-width: 375px ){
+   
+    /* Responsividade da tela de login */
+   #main_container{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+   }
+   .container{
+    max-width: 100%;
+   }
+   .logins{
+    height: 98vh;
+    padding: 14px 0px;
+   }
+   .formulario{
+    width: 90%;
+   }
+   .log-inputs{
+    width: 100%;
+    font-size: 14px;
+   }
+   .log-inputs input{
+    max-width: 100%;
+    height: 60%;
+   }
+   .log-inputs .labelpass{
+    font-size: 14px;
+   }
+   .showPass i{
+    top: 130px;
+    font-size: 18px;
+   }
+   .check-inputs{
+    margin-top: 8px;
+    font-size: 14px;
+   }
+   .login-button{
+    height: 50px;
+   }
+   .lines{
+    width: 85%;
+   }
+   .midias .glg, .meta{
+    width: 70%;
+   }
+
+   /* Responsividade da tela de cadastro */
+
+   .form-Regist label{
+        font-size: 16px;
+   }
+   .mostarSenha{
+    top: 165px;
+    right: 30px;
+   }
+   .confirSenha{
+    top: 268px;
+    right: 30px;
+   }
+   .lines-login{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 10px;
+   }
+   .lines-login p{
+    font-size: 12px;
+    margin-left: 16px;
+   }
+   .line-login{
+    width: 30%;
+    display: flex;
+   }
+   .form-Regist button{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+   }
+   .midias img{
+        width: 70%;
+    }
+ 
+}
+
+ 
