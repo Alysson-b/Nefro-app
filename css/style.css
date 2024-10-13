@@ -64,7 +64,8 @@
   flex-direction: column;
   border-radius: 30px 30px 0px 0px;
   color: #fff;
-  padding: 30px 15px 12px;
+  padding: 30px 15px;
+  margin: 30px 0px 0px;
 }
 
 .log-inputs {
@@ -1071,7 +1072,7 @@
     width: 90%;
   }
   .logins {
-    padding: 30px 15px 12px;
+    padding: 30px 15px;
   }
   .log-inputs {
     width: 100%;
@@ -1150,7 +1151,7 @@
     max-width: 100%;
   }
   .logins {
-    padding: 30px 15px 12px;
+    padding: 30px 15px;
   }
   .formulario {
     width: 100%;
