@@ -63,10 +63,12 @@ $backgound-linear: #004B87, #04345A;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: auto;
     overflow: auto;
 }
 .logins{
     min-height: 100%;
+    max-height: 700px;
     width: 100%;
     background: linear-gradient(to top, $prymary-color, $prymary-color, $secondy-color);
     @include flex-center();
