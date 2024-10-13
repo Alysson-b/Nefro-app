@@ -11,7 +11,7 @@
   justify-content: center;
   font-family: "Inter", sans-serif;
   background: linear-gradient(320deg, #fff, #fff, #fff, #faefe0);
-  overflow: hidden;
+  overflow: auto;
 }
 
 #inputScreen {
@@ -30,6 +30,7 @@
 }
 
 .home-img img {
+  margin: 32px 0px;
   width: 250px;
   height: auto;
 }
@@ -53,7 +54,7 @@
 
 .logins {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   background: linear-gradient(to top, #04345A, #04345A, #00679A);
   display: flex;
   align-items: center;
