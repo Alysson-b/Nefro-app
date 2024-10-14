@@ -57,11 +57,11 @@
 
             <div id="buttonDiv"></div>
             <div class="midias" >
-                    <a  id="hrefGoogle" href="#">
+                    <a  id="hrefGoogle" href="">
                             <img class="glg" src="./assets/google-logo.png" alt="logo do google">
                     </a>
 
-                    <a id="hrefMeta" href="#" target="_blank">
+                    <a id="hrefMeta" href="" target="_blank">
                             <img class="meta" src="./assets/meta-logo.png" alt="logo do facebook/meta">
                     </a> 
             </div>
@@ -145,13 +145,11 @@
 
             <div class="questionContainer">
             <div class="edit-questao">
-                <div class="labeltext">
                 <label for="Questao">Questao 1 <span><i class='bx bxs-pencil'></i></span></label> 
-             </div>
                 <div class="area-text">
                         <textarea name="Questao" id="textQuest" placeholder="Enuciado..."></textarea>
                         <span class="text-icon"><i class='bx bxs-pencil'></i></span>
-                    </div>   
+                </div>   
             </div>
 
             <div class="filter-question">
@@ -258,7 +256,7 @@
     <div class="subSection">
         <div class="itemX">
             <p>item <strong>X</strong><span><i class='bx bxs-pencil' style='color:#b6b6b6'></i></span></p>
-            <button><span><i class='bx bx-upload' ></i></span>Video explicaçao</button>
+            <button><span><i class='bx bx-upload' ></i></span>Explicaçao</button>
         </div>
         <div class="Explication">
            <label for="">Explicação</label>
@@ -271,6 +269,10 @@
             <button>Salvar</button>
         </div>
     </div>
+   </section>
+
+   <section class="modalImg">
+        <img src="" alt="">
    </section>
 
     <!-- sessão de historico do usuario -->
@@ -406,8 +408,8 @@
     <script src="./js/forms.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/adm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js" defer></script>
 </body>
 </html>
 
