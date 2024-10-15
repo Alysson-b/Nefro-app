@@ -90,12 +90,9 @@ loginButton.addEventListener('click', (e) =>{
 
 })
 
-editBtn.addEventListener('click', (e)=>{
-    e.preventDefault()
-
+editBtn.addEventListener('click', ()=>{
     container.style.display = 'flex'
     sectionCreatQuestion.style.display = 'none'
-    editHistBtn.style.display = 'none'
 
 })
 
