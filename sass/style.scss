@@ -25,19 +25,28 @@ $backgound-linear: #004B87, #04345A;
     box-sizing: border-box;
 }
 #main_container{
+    display: none;
     @include flex-center();
     font-family: $font-family;
     background: linear-gradient(320deg,$white-color, $white-color,$white-color, #faefe0);
     overflow: auto;
+    opacity: 0; 
+    transition: opacity 0.5s ease-out;
+    z-index: 1;
 }
 #inputScreen{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
     background: linear-gradient(320deg,$white-color, $white-color,$white-color, #faefe0);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
 #inputScreen img{
     max-width: 500px;
     width: 100%;
@@ -448,6 +457,7 @@ $backgound-linear: #004B87, #04345A;
     flex-direction: column;
     width: 100%;
     background-color: $gray-color-2;
+    z-index: 0;
 }
 
 .edit{
@@ -870,9 +880,42 @@ $backgound-linear: #004B87, #04345A;
     color: $red-color;
     margin: 20px 0px 0px;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    z-index: 998; 
+}
 
-.modalImg{
+.modal{
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+}
+.popUpImg{
+    padding: 5px;
+    background-color: $white-color;
+    border-radius: 10px;
+    width: 95%;
+    height: 35%;
+    object-fit: cover;
+}
+.popup-imagem{
+    background-color: $black-color;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 /* Estilizaçao da tela de historico */
@@ -915,7 +958,7 @@ $backgound-linear: #004B87, #04345A;
 
 }
 .textResult{
-    width: 100%;
+    width: 95%;
     padding-left: 1.2em;
     font-size: 16px;
     font-weight: 700;
@@ -937,6 +980,7 @@ $backgound-linear: #004B87, #04345A;
     width: 50%;
 }
 .imgCurso img{
+    max-width: 120px;
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -949,16 +993,22 @@ $backgound-linear: #004B87, #04345A;
     justify-content: center;
     gap: 3px;
 }
-.stas{
+.stars{
     width: 100%;
     height: auto;
     display: flex;
     gap: 2px;
 }
-.stas i{
+.stars i{
     font-size: 12px;
+    color: $color-gray-3;
+    cursor: pointer;
 }
-.stas h2{
+.fa-star.select{
+    color: $orange-color;
+
+}
+.stars h2{
     font-size: 19px;
     font-weight: bold;
     color: $prymary-color;
@@ -969,6 +1019,9 @@ $backgound-linear: #004B87, #04345A;
 }
 .iconHeart i{
     font-size: 25px;
+}
+.iconHeart .fa-heart.select{
+    color: $red-color;
 }
 
 
@@ -1138,8 +1191,10 @@ $backgound-linear: #004B87, #04345A;
         font-size: 16px;
     }
 
-
-
+    .historico .fa-star{
+        font-size: 10px;
+    }
+    
   
 }
 @media (max-width: 375px ){
@@ -1261,7 +1316,6 @@ $backgound-linear: #004B87, #04345A;
         font-size: 17px;
     }
     
- 
 }
 
  

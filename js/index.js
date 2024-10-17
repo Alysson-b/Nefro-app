@@ -8,8 +8,8 @@ function handleCredentialResponse(response) {
       callback: handleCredentialResponse
     });
     google.accounts.id.renderButton(
-      document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large" }  
+        document.getElementById("buttonDiv"),
+        { theme: "outline", size: "large" }  
     );
    
     

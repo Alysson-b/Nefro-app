@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/style.css">
@@ -139,7 +139,7 @@
 
         <div class="prepare-question">
             <div class="edit">
-                <span><img src="./assets/seta-esquerda.png" alt=""></span>
+                <span class="createBack"><img src="./assets/seta-esquerda.png" alt=""></span>
                 <p>Editar questão</p>
             </div>
 
@@ -256,7 +256,7 @@
     <div class="subSection">
         <div class="itemX">
             <p>item <strong>X</strong><span><i class='bx bxs-pencil' style='color:#b6b6b6'></i></span></p>
-            <button><span><i class='bx bx-upload' ></i></span>Explicaçao</button>
+            <button class="uploadImg"><span><i class='bx bx-upload' ></i></span>Explicaçao</button>
         </div>
         <div class="Explication">
            <label for="">Explicação</label>
@@ -271,15 +271,19 @@
     </div>
    </section>
 
-   <section class="modalImg">
-        <img src="" alt="">
+   <div class="overlay"></div>
+   <section class="modal">
+    <div class="popUpImg">
+        <img src="https://centromedicoberrini.com.br/images/artigos/o-que-faz-o-medico-nefrologista-quando-procurar.jpg" alt="" class=popup-imagem>
+    </div>
+<!--         <img src="https://i.pinimg.com/236x/80/0a/f9/800af9d26317739f863f730561ffdcd5.jpg" alt=""> -->
    </section>
 
     <!-- sessão de historico do usuario -->
 
    <section class="historico" id="historico">
     <div class="edit">
-        <span class="historicoBack"><img src="./assets/seta-esquerda.png" alt=""></span>
+        <span class="histrBack"><img src="./assets/seta-esquerda.png" alt=""></span>
         <p>Histórico</p>
     </div>
 
@@ -299,20 +303,20 @@
             <img src="https://www.redeicm.org.br/madrebarbara/wp-content/uploads/sites/12/2018/11/CGABARITO.jpg" alt="">
         </div>
         <div class="texts">
-            <div class="stas">
+            <div class="stars">
                 <h2>Teste 1</h2>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>  
+                <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                <span><i class="fa-solid fa-star" data-value="5"></i></span>  
             </div>
             <div class="porcetagem">
                 <p>50% de acerto</p>
             </div>
         </div>
         <div class="iconHeart">
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-heart" data-value="1"></i></span>
         </div>
     </div>
 
@@ -321,20 +325,20 @@
             <img src="https://provafacilnaweb.com.br/wp-content/uploads/2020/11/leitor-de-gabarito-de-provas-o-que-e-e-como-funciona-3-2048x1365-1.jpg" alt="">
         </div>
         <div class="texts">
-            <div class="stas">
+            <div class="stars">
                 <h2>Teste 2</h2>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>  
+                <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                <span><i class="fa-solid fa-star" data-value="5"></i></span>
             </div>
             <div class="porcetagem">
                 <p>50% de acerto</p>
             </div>
         </div>
         <div class="iconHeart">
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-heart" data-value="2"></i></span>
         </div>
     </div>
 
@@ -343,20 +347,20 @@
             <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3313916:1671446099/concurso-publico.jpg?f=4x3&$p$f=ebf9819" alt="">
         </div>
         <div class="texts">
-            <div class="stas">
+            <div class="stars">
                 <h2>Teste 3</h2>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>  
+                <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                <span><i class="fa-solid fa-star" data-value="5"></i></span>
             </div>
             <div class="porcetagem">
                 <p>50% de acerto</p>
             </div>
         </div>
         <div class="iconHeart">
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-heart" data-value="3"></i></span>
         </div>
     </div>
 
@@ -365,20 +369,20 @@
             <img src="https://roraimaemtempo.com.br/wp-content/uploads/2021/08/vestibular-2-860x573.jpg" alt="">
         </div>
         <div class="texts">
-            <div class="stas">
+            <div class="stars">
                 <h2>Teste 4</h2>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>  
+                <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                <span><i class="fa-solid fa-star" data-value="5"></i></span>
             </div>
             <div class="porcetagem">
                 <p>50% de acerto</p>
             </div>
         </div>
         <div class="iconHeart">
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-heart" data-value="4"></i></span>
         </div>
     </div>
 
@@ -387,20 +391,20 @@
             <img src="https://www.reporterdiario.com.br/wp-content/uploads/2023/12/Camara-dos-Deputados-abre-inscricoes-para-concurso-com-salario-de-ate-R-34-mil-1200x800-1-e1703623255710.png" alt="">
         </div>
         <div class="texts">
-            <div class="stas">
+            <div class="stars">
                 <h2>Teste 5</h2>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>
-                <span><i class="fa-solid fa-star"></i></span>  
+                <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                <span><i class="fa-solid fa-star" data-value="5"></i></span>
             </div>
             <div class="porcetagem">
                 <p>50% de acerto</p>
             </div>
         </div>
         <div class="iconHeart">
-            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-heart" data-value="5"></i></span>
         </div>
     </div>
    </section>

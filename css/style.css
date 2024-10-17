@@ -6,21 +6,29 @@
 }
 
 #main_container {
+  display: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Inter", sans-serif;
   background: linear-gradient(320deg, #fff, #fff, #fff, #faefe0);
   overflow: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  z-index: 1;
 }
 
 #inputScreen {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100%;
   background: linear-gradient(320deg, #fff, #fff, #fff, #faefe0);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #inputScreen img {
@@ -454,6 +462,7 @@
   flex-direction: column;
   width: 100%;
   background-color: #efefef;
+  z-index: 0;
 }
 
 .edit {
@@ -901,8 +910,43 @@
   margin: 20px 0px 0px;
 }
 
-.modalImg {
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  z-index: 998;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popUpImg {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 95%;
+  height: 35%;
+  object-fit: cover;
+}
+
+.popup-imagem {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 /* Estilizaçao da tela de historico */
@@ -947,7 +991,7 @@
 }
 
 .textResult {
-  width: 100%;
+  width: 95%;
   padding-left: 1.2em;
   font-size: 16px;
   font-weight: 700;
@@ -972,6 +1016,7 @@
 }
 
 .imgCurso img {
+  max-width: 120px;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -986,18 +1031,24 @@
   gap: 3px;
 }
 
-.stas {
+.stars {
   width: 100%;
   height: auto;
   display: flex;
   gap: 2px;
 }
 
-.stas i {
+.stars i {
   font-size: 12px;
+  color: #ababab;
+  cursor: pointer;
 }
 
-.stas h2 {
+.fa-star.select {
+  color: #ff9600;
+}
+
+.stars h2 {
   font-size: 19px;
   font-weight: bold;
   color: #04345A;
@@ -1010,6 +1061,10 @@
 
 .iconHeart i {
   font-size: 25px;
+}
+
+.iconHeart .fa-heart.select {
+  color: #f30000;
 }
 
 @keyframes bounce-in-bottom {
@@ -1164,6 +1219,9 @@
   }
   #msgError {
     font-size: 16px;
+  }
+  .historico .fa-star {
+    font-size: 10px;
   }
 }
 @media (max-width: 375px) {

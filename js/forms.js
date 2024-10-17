@@ -36,10 +36,14 @@ document.addEventListener('DOMContentLoaded', () =>{
     const body = document.querySelector('body')
 
 
-    
+    /* variaveis da section de create-question / historico */
     const sectionCreatQuestion = document.querySelector('.create-question')
-    const editBtn = document.querySelectorAll('.edit img')
+    const editBtn = document.querySelector('.createBack')
     const editHistBtn = document.getElementById('historico')
+    const histBack = document.querySelector('.histrBack')
+    const starsRating = document.querySelectorAll('.stars')
+    const heartRating = document.querySelectorAll('.iconHeart')
+   
 
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
@@ -95,22 +99,39 @@ editBtn.addEventListener('click', ()=>{
     sectionCreatQuestion.style.display = 'none'
 
 })
+histBack.addEventListener('click', ()=>{
+    sectionCreatQuestion.style.display = 'flex'
+    editHistBtn.style.display = 'none'
 
-window.onload = function () {
+})
+
+
+    /* transiçao da tela inicial */
+    
+  window.onload = function () {
     setTimeout(function () {
-        const mainContainer = document.getElementById('main_container')
-        const inputScreen = document.getElementById('.inputScreen')
+        const mainContainer = document.getElementById('main_container');
+        const inputScreen = document.getElementById('inputScreen');
+
+        console.log("Iniciando a transição da tela de entrada...");
+
+        mainContainer.style.display = 'flex'; 
+        mainContainer.style.opacity = 0; 
 
         inputScreen.style.transition = 'opacity 0.5s ease-out';
-        inputScreen.style.opacity = 0;
+        inputScreen.style.opacity = 0; 
 
-        setTimeout(() =>{
-            inputScreen.style.display = 'none'
-        }, 500)
-
-        mainContainer.style.display = 'flex'
+        setTimeout(() => {
+            inputScreen.style.display = 'none'; 
+            console.log("Tela de entrada ocultada.");
+            
+            mainContainer.style.transition = 'opacity 0.5s ease-out';
+            mainContainer.style.opacity = 1; 
+            console.log("Tela principal exibida.");
+        }, 500); 
     }, 500); 
-  };
+};
+
 
 function  login(){
     const loginEmailValue = loginEmail.value.trim()
@@ -251,4 +272,28 @@ function togglePassword(input, icon) {
     }
 }
 
+/* funçao para selecionar a quantidade de estrelas para questoes! */
+
+starsRating.forEach((rating) => {
+    const stars = rating.querySelectorAll('.fa-star')
+    let starSelect = 0;
+
+    stars.forEach((star)=>{
+        star.addEventListener('click', function(){
+            starSelect = this.getAttribute('data-value')
+
+            stars.forEach((s) => s.classList.remove('select'))
+            for( let i = 0; i < starSelect; i++){
+                stars[i].classList.add('select')
+            }
+        })
+    })
+})
+heartRating.forEach((rating) => {
+    const heart = rating.querySelector('.fa-heart')
+
+        heart.addEventListener('click', function(){
+            heart.classList.toggle('select')
+        })
+    })
 })
