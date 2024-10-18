@@ -19,7 +19,7 @@
 }
 
 #inputScreen {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -44,12 +44,13 @@
 }
 
 .container {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 /* Estilizaçao dos inputs de login da tela principal */
@@ -64,6 +65,7 @@
 
 .logins {
   width: 100%;
+  height: auto;
   background: linear-gradient(to top, #04345A, #04345A, #00679A);
   display: flex;
   align-items: center;
@@ -221,7 +223,7 @@
 
 /* Estilizaçao do primeiro acesso */
 .first {
-  margin-top: 20px;
+  margin: 20px 0px 0px;
   cursor: pointer;
 }
 
@@ -411,7 +413,7 @@
 }
 
 .logar {
-  margin: 20px 0px;
+  margin: 20px 0px 5px;
 }
 
 .logar a {
@@ -456,7 +458,7 @@
 /* tela EXCLUSIVA DO ADM  */
 /* Estilizaçao da tela para criar questao */
 .create-question {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -940,6 +942,7 @@
   width: 95%;
   height: 35%;
   object-fit: cover;
+  animation: fade-in-bck 2s ease;
 }
 
 .popup-imagem {
@@ -1105,6 +1108,16 @@
   }
   from {
     transform: translateY(100px);
+  }
+}
+@keyframes fade-in-bck {
+  0% {
+    transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
   }
 }
 @media (max-width: 320px) {
