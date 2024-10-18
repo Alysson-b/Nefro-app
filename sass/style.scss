@@ -80,6 +80,7 @@ $backgound-linear: #004B87, #04345A;
 .logins{
     width: 100%;
     height: auto;
+    max-height: 800px;
     background: linear-gradient(to top, $prymary-color, $prymary-color, $secondy-color);
     @include flex-center();
     flex-direction: column;
@@ -87,7 +88,6 @@ $backgound-linear: #004B87, #04345A;
     color: $white-color;
     padding: 30px 15px;
     margin: 35px 0px 0px;
-
 }
 .log-inputs{
     width: 100%;
@@ -412,7 +412,7 @@ $backgound-linear: #004B87, #04345A;
     border: 1px solid $black-color;
 }
 .logar{
-    margin: 20px 0px 5px;
+    margin: 20px 0px;
 }
 .logar a{
     font-size: 16px;

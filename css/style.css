@@ -66,6 +66,7 @@
 .logins {
   width: 100%;
   height: auto;
+  max-height: 800px;
   background: linear-gradient(to top, #04345A, #04345A, #00679A);
   display: flex;
   align-items: center;
@@ -413,7 +414,7 @@
 }
 
 .logar {
-  margin: 20px 0px 5px;
+  margin: 20px 0px;
 }
 
 .logar a {
