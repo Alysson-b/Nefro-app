@@ -35,7 +35,7 @@ $backgound-linear: #004B87, #04345A;
     z-index: 1;
 }
 #inputScreen{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -59,7 +59,7 @@ $backgound-linear: #004B87, #04345A;
 }
 
 .container{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -453,7 +453,7 @@ $backgound-linear: #004B87, #04345A;
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;

@@ -19,7 +19,7 @@
 }
 
 #inputScreen {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -44,7 +44,7 @@
 }
 
 .container {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -458,7 +458,7 @@
 /* tela EXCLUSIVA DO ADM  */
 /* Estilizaçao da tela para criar questao */
 .create-question {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
