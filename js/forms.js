@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const histBack = document.querySelector('.histrBack')
     const starsRating = document.querySelectorAll('.stars')
     const heartRating = document.querySelectorAll('.iconHeart')
-   
+    
 
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
@@ -107,8 +107,7 @@ histBack.addEventListener('click', ()=>{
 
 
     /* transiçao da tela inicial */
-    
-  window.onload = function () {
+      window.onload = function () {
     setTimeout(function () {
         const mainContainer = document.getElementById('main_container');
         const inputScreen = document.getElementById('inputScreen');
@@ -141,7 +140,7 @@ function  login(){
         alert('campos obrigatorios')
     }else{
         container.style.display = 'none'
-        sectionCreatQuestion.style.display = 'flex'
+        userHome.style.display = 'flex'
     }
 
 }
@@ -297,3 +296,31 @@ heartRating.forEach((rating) => {
         })
     })
 })
+
+
+    /* variais da tela Home */
+
+const config = document.querySelector('.iconConfig'); 
+const popUser = document.querySelector('.popUpUser'); 
+const home = document.querySelector('.userHome')
+const overlay = document.querySelector('.overlay');
+
+config.addEventListener('click', popUpOpen);
+
+
+function popUpOpen() {
+    const Visible = popUser.style.display === 'flex';
+    popUser.style.display = Visible ? 'none' : 'flex'; 
+    overlay.style.display = Visible ? 'none' : 'block';
+
+}
+
+document.addEventListener('click', function(event) {
+
+    if (!popUser.contains(event.target) && !config.contains(event.target)) {
+        popUser.style.display = 'none';
+        overlay.style.display = 'none'; 
+
+    }
+});
+

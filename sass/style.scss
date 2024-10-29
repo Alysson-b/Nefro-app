@@ -25,17 +25,17 @@ $backgound-linear: #004B87, #04345A;
     box-sizing: border-box;
 }
 #main_container{
-    display: none;
+    display: flex;
     @include flex-center();
     font-family: $font-family;
     background: linear-gradient(320deg,$white-color, $white-color,$white-color, #faefe0);
     overflow: auto;
-    opacity: 0; 
+    
     transition: opacity 0.5s ease-out;
     z-index: 1;
 }
 #inputScreen{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -59,7 +59,7 @@ $backgound-linear: #004B87, #04345A;
 }
 
 .container{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -242,6 +242,7 @@ $backgound-linear: #004B87, #04345A;
 
 #buttonDiv{
     display: none;
+
 }
 
 
@@ -449,6 +450,172 @@ $backgound-linear: #004B87, #04345A;
     margin-top: 3px;
 }
 
+/*  tela princpal da home */
+
+.userHome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background: $gray-color-2;
+}
+.homePage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, $prymary-color, $prymary-color, $prymary-color);
+    border-radius: 0px 0px 27px 27px;
+    padding: 20px 10px;
+}
+.dataUser{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.homePage img{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+.dataUser h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: $orange-color;
+}
+.dataUser p{
+    font-size: 14px;
+    font-weight: 300;
+    color: $gray-color;
+}
+.iconConfig i{
+    font-size: 30px;
+    color: $orange-color;
+    cursor: pointer;
+}
+
+.performance{
+    margin: 23px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.performance p{
+    font-size: 16px;
+    font-weight: bold;
+    color: $black-color;
+}
+.performance i{
+    font-size: 25px;
+    font-weight: bold;
+    color: $orange-color;
+    cursor: pointer;
+}
+
+.homeTests{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    margin: 30px 0px 0px;
+}
+.homeTests p{
+    font-size: 16px;
+    font-weight: bold;
+    color: $black-color;
+    margin-bottom: 10px;
+}
+.last-teste{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white-color;
+    border-radius: 8px;
+    padding: 20px 10px;
+    
+}
+.prime-teste{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+.prime-teste h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: $black-color;
+
+}
+.prime-teste p {
+    font-size: 12px;
+    font-weight: 400;
+    color: $gray-color;
+}
+.image-teste{
+    width: 100%;
+    height: 100%
+
+}
+.image-teste img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.all-testes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0px 0px;
+}
+.containerTests{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.containerTests h2{
+    font-size: 16px;
+    font-weight: bold;
+    color: $black-color;
+}
+
+.containerTests p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: $orange-color;
+}
+.containerTests p i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: $orange-color;
+}
+
+.all-histor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0px 0px;
+}
+
+
+
+
 /* tela EXCLUSIVA DO ADM  */
 /* Estilizaçao da tela para criar questao */
 
@@ -543,6 +710,10 @@ $backgound-linear: #004B87, #04345A;
     padding: 12px 8px;
     overflow: hidden;
 }
+.edit-questao textarea:focus{
+    outline: none;
+    border: 1px solid $orange-color;
+}
 
 .area-text{
     position: relative;
@@ -582,6 +753,10 @@ $backgound-linear: #004B87, #04345A;
     font-weight: 400;
     color: $color-gray-3;
     padding: 0px 50px;
+}
+.search input:focus{
+    outline: none;
+
 }
 
 .search span{
@@ -697,6 +872,10 @@ $backgound-linear: #004B87, #04345A;
     color: $gray-color;
     background-color: $gray-color-2;
 }
+.question input[type="text"]:focus{
+    outline: none;
+}
+
 .input-question{
     width: 100%;
     position: relative;
@@ -1027,6 +1206,113 @@ $backgound-linear: #004B87, #04345A;
     color: $red-color;
 }
 
+/* tela de perfil do Pop-Up do Usuario */
+.popUpUser {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;    
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 999;
+    animation: puff-in 0.7s ease-in-out;
+    
+}
+
+.edit-User {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.edit-User span{
+    width: 20px;
+    height: 20px;
+    background-color: $orange-color;
+    border-radius: 50%;
+    color: $white-color;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 60%;
+    top: 5%;
+    cursor: pointer;
+}
+.edit-User i{
+    font-size: 12px;
+    color: $white-color;
+}
+
+.edit-User img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: relative;
+}
+
+.edit-User h2 {
+
+    font-size: 22px;
+    font-weight: bold;
+    color: $prymary-color;
+    position: relative;
+}
+
+.dateUser label {
+    font-weight: 500;
+    color: $black-color;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dateUser input[type="text"],
+.descriptionUser textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffa500;
+    border-radius: 8px;
+    font-size: 16px;
+    color: $color-gray-3;
+    margin-bottom: 10px;
+}
+
+
+.descriptionUser textarea {
+    height: 80px;
+}
+
+.locationUser {
+    display: flex;
+    gap: 10px;
+}
+
+.locationUser .location, .locationUser .city {
+    flex: 1;
+}
+
+.update {
+    width: 100%;
+    padding: 12px;
+    background-color: $color-gray-3;
+    color: $gray-color;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
 
 
 @keyframes bounce-in-bottom {
@@ -1082,6 +1368,20 @@ $backgound-linear: #004B87, #04345A;
     }
   }
 
+@keyframes puff-in {
+    0% {
+      
+        transform: scale(2);
+        filter: blur(4px);
+        opacity: 0;
+    }
+    100% {
+      
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+  }
   
 
 
