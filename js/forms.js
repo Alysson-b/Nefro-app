@@ -315,6 +315,12 @@ function popUpOpen() {
 
 }
 
+/* Modal plus da tela Home */
+
+const newQuestion = document.querySelector(".newQuestion")
+const newtest = document.querySelector(".newtest")
+const homeUser = document.querySelector('.userHome')
+
 document.addEventListener('click', function(event) {
 
     if (!popUser.contains(event.target) && !config.contains(event.target)) {
@@ -323,4 +329,24 @@ document.addEventListener('click', function(event) {
 
     }
 });
+document.querySelector('.creationIcon').addEventListener('click', function() {
+    const modal = document.querySelector('.modalCreate');
+    modal.classList.toggle('show');
+});
 
+document.addEventListener('click', function(event) {
+    const modal = document.querySelector('.modalCreate');
+    const icon = document.querySelector('.creationIcon');
+    
+    if (!modal.contains(event.target) && !icon.contains(event.target)) {
+        modal.classList.remove('show');
+    }
+});
+
+newQuestion.addEventListener('click', function(e){
+    e.preventDefault()
+
+    homeUser.style.display = 'none'
+    sectionCreatQuestion.style.display = 'flex'
+    
+})

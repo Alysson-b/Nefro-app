@@ -10,8 +10,8 @@
 </head>
 <body>
     <!-- tela de entrada do app -->
-     <div id="inputScreen"><img src="./assets/Nefropapers-logo.png" alt=""></div>
-     
+<div id="inputScreen"><img src="./assets/Nefropapers-logo.png" alt=""></div>
+
     <!-- tela de login do usuario -->
     <div id="main_container">
     <div class="container">
@@ -22,7 +22,7 @@
 
         <div class="logins">
             <!-- login dos usuarios -->
-             <form action="" id="form" class="formulario">
+            <form action="" id="form" class="formulario">
                 <div class="log-inputs" id="log-inputs">
                     <label for="email">Email</label>
                     <input name="email" class="inputEmail" type="email" placeholder="Email" id="inputEmail" required>
@@ -272,7 +272,7 @@
     </section>
 
     <!-- PopUp-User -->
-     <section class="popUpUser">
+    <section class="popUpUser">
         <div class="edit-User">
             <img src="" alt="">
             <h2>Nome do Usuario</h2>
@@ -299,9 +299,9 @@
             </div>
         </div>
         <button class="update">Atualizar</button>
-     </section>
+    </section>
 
-     <!-- sessão para criar as questões do quiz -->
+    <!-- sessão para criar as questões do quiz -->
     <section class="create-question">
 
 
@@ -427,8 +427,8 @@
             <button class="uploadImg"><span><i class='bx bx-upload' ></i></span>Explicaçao</button>
         </div>
         <div class="Explication">
-           <label for="">Explicação</label>
-           <textarea class="explication-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+            <label for="">Explicação</label>
+            <textarea class="explication-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
         </div>
 
         <div id="msgError"></div>
@@ -437,20 +437,20 @@
             <button>Salvar</button>
         </div>
     </div>
-   </section>
+    </section>
 
 
-   <div class="overlay"></div>
-   <section class="modal">
+    <div class="overlay"></div>
+    <section class="modal">
     <div class="popUpImg">
         <img src="https://centromedicoberrini.com.br/images/artigos/o-que-faz-o-medico-nefrologista-quando-procurar.jpg" alt="" class=popup-imagem>
     </div>
 <!--         <img src="https://i.pinimg.com/236x/80/0a/f9/800af9d26317739f863f730561ffdcd5.jpg" alt=""> -->
-   </section>
+    </section>
 
     <!-- sessão de historico do usuario -->
 
-   <section class="historico" id="historico">
+    <section class="historico" id="historico">
     <div class="edit">
         <span class="histrBack"><img src="./assets/seta-esquerda.png" alt=""></span>
         <p>Histórico</p>
@@ -576,7 +576,179 @@
             <span><i class="fa-solid fa-heart" data-value="5"></i></span>
         </div>
     </div>
-   </section>
+    </section>
+
+    <!-- SESSÃO ONDE FICARA TODOS OS TESTES FEITOS PELO USUARIO -->
+    <section class="all-tests">
+
+        <div class="header-teste">
+            <img class="allBackTets" src="./assets/seta-esquerda.png" alt="">
+            <p>Todos os testes</p>
+        </div>
+
+        <div class="filter-header-testes">
+            <div class="filter-input">
+                <input type="text" placeholder="Procurar teste">
+                <span><i class='bx bx-microphone' ></i></span>
+                <span class="lupa"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+        </div>
+
+        <div class="boxTest">
+            <div class="titlebox">
+                <p>Feitos por mim</p>
+                <span><i class='bx bx-chevron-down' ></i></span>
+            </div>
+            <div class="all-histor">
+                <div class="historicos">
+                    <div class="imgCurso">
+                        <img src="https://www.redeicm.org.br/madrebarbara/wp-content/uploads/sites/12/2018/11/CGABARITO.jpg" alt="">
+                    </div>
+                    <div class="texts">
+                        <div class="stars">
+                            <h2>Teste 1</h2>
+                            <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="5"></i></span>  
+                        </div>
+                        <div class="porcetagem">
+                            <p>50% de acerto</p>
+                        </div>
+                    </div>
+                    <div class="iconHeart">
+                        <span><i class="fa-solid fa-heart" data-value="1"></i></span>
+                    </div>
+                </div>
+            
+                <div class="historicos">
+                    <div class="imgCurso">
+                        <img src="https://provafacilnaweb.com.br/wp-content/uploads/2020/11/leitor-de-gabarito-de-provas-o-que-e-e-como-funciona-3-2048x1365-1.jpg" alt="">
+                    </div>
+                    <div class="texts">
+                        <div class="stars">
+                            <h2>Teste 2</h2>
+                            <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="5"></i></span>
+                        </div>
+                        <div class="porcetagem">
+                            <p>50% de acerto</p>
+                        </div>
+                    </div>
+                    <div class="iconHeart">
+                        <span><i class="fa-solid fa-heart" data-value="2"></i></span>
+                    </div>
+                </div>
+            
+                <div class="historicos">
+                    <div class="imgCurso">
+                        <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3313916:1671446099/concurso-publico.jpg?f=4x3&$p$f=ebf9819" alt="">
+                    </div>
+                    <div class="texts">
+                        <div class="stars">
+                            <h2>Teste 3</h2>
+                            <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="5"></i></span>
+                        </div>
+                        <div class="porcetagem">
+                            <p>50% de acerto</p>
+                        </div>
+                    </div>
+                    <div class="iconHeart">
+                        <span><i class="fa-solid fa-heart" data-value="3"></i></span>
+                    </div>
+                </div>
+        </div>
+
+        <div class="boxTest">
+            <div class="titlebox">
+                <p>Todos os testes</p>
+                <span><i class='bx bx-chevron-down' ></i></span>
+            </div>
+            <div class="all-histor">
+                <div class="historicos">
+                    <div class="imgCurso">
+                        <img src="https://www.redeicm.org.br/madrebarbara/wp-content/uploads/sites/12/2018/11/CGABARITO.jpg" alt="">
+                    </div>
+                    <div class="texts">
+                        <div class="stars">
+                            <h2>Teste 1</h2>
+                            <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="5"></i></span>  
+                        </div>
+                        <div class="porcetagem">
+                            <p>50% de acerto</p>
+                        </div>
+                    </div>
+                    <div class="iconHeart">
+                        <span><i class="fa-solid fa-heart" data-value="1"></i></span>
+                    </div>
+                </div>
+            
+                <div class="historicos">
+                    <div class="imgCurso">
+                        <img src="https://provafacilnaweb.com.br/wp-content/uploads/2020/11/leitor-de-gabarito-de-provas-o-que-e-e-como-funciona-3-2048x1365-1.jpg" alt="">
+                    </div>
+                    <div class="texts">
+                        <div class="stars">
+                            <h2>Teste 2</h2>
+                            <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="5"></i></span>
+                        </div>
+                        <div class="porcetagem">
+                            <p>50% de acerto</p>
+                        </div>
+                    </div>
+                    <div class="iconHeart">
+                        <span><i class="fa-solid fa-heart" data-value="2"></i></span>
+                    </div>
+                </div>
+            
+                <div class="historicos">
+                    <div class="imgCurso">
+                        <img src="https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3313916:1671446099/concurso-publico.jpg?f=4x3&$p$f=ebf9819" alt="">
+                    </div>
+                    <div class="texts">
+                        <div class="stars">
+                            <h2>Teste 3</h2>
+                            <span><i class="fa-solid fa-star" data-value="1"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="2"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="3"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="4"></i></span>
+                            <span><i class="fa-solid fa-star" data-value="5"></i></span>
+                        </div>
+                        <div class="porcetagem">
+                            <p>50% de acerto</p>
+                        </div>
+                    </div>
+                    <div class="iconHeart">
+                        <span><i class="fa-solid fa-heart" data-value="3"></i></span>
+                    </div>
+                </div>
+        </div>
+        <div class="creationIcon" onclick="toggleModal()">
+            <span><i class="fa-solid fa-plus"></i></span>
+            <div class="modalCreate">
+                <p class="newTest">Novo teste <span><i class='bx bx-file' ></i></span></p>
+                <div class="line"></div>
+                <p class="newQuestion">Nova Questão <span><i class="fa-regular fa-comment-dots"></i></span></p>
+            </div>
+        </div>
+
+    </section>
 </div>
 
     <script src="./js/forms.js"></script>
