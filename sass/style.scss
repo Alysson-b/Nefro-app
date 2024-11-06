@@ -624,7 +624,7 @@ $backgound-linear: #004B87, #04345A;
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1320,7 +1320,7 @@ $backgound-linear: #004B87, #04345A;
     /*ESTILIZAÇAO DA TELA DE TODOS OS TESTES  */
 
 .all-tests{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
