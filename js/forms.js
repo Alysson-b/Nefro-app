@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () =>{
     const heartRating = document.querySelectorAll('.iconHeart')
     
 
+    
+
+    /* variaveis da tela all test */
+    const newQuestion = document.querySelector(".newQuestion")
+    const newtest = document.querySelector(".newtest")
+    const allTest = document.querySelector('.all-tests')
+
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
     checkInputs();
@@ -95,19 +102,27 @@ loginButton.addEventListener('click', (e) =>{
 })
 
 editBtn.addEventListener('click', ()=>{
-    container.style.display = 'flex'
+    home.style.display = 'flex'
     sectionCreatQuestion.style.display = 'none'
 
 })
+
 histBack.addEventListener('click', ()=>{
-    sectionCreatQuestion.style.display = 'flex'
+    home.style.display = 'flex'
     editHistBtn.style.display = 'none'
 
+})
+newQuestion.addEventListener('click', function(e){
+    e.preventDefault()
+
+    allTest.style.display = 'none'
+    sectionCreatQuestion.style.display = "flex"
+    
 })
 
 
     /* transiçao da tela inicial */
-      window.onload = function () {
+window.onload = function () {
     setTimeout(function () {
         const mainContainer = document.getElementById('main_container');
         const inputScreen = document.getElementById('inputScreen');
@@ -129,7 +144,7 @@ histBack.addEventListener('click', ()=>{
             console.log("Tela principal exibida.");
         }, 500); 
     }, 500); 
-};
+}; 
 
 
 function  login(){
@@ -140,7 +155,7 @@ function  login(){
         alert('campos obrigatorios')
     }else{
         container.style.display = 'none'
-        userHome.style.display = 'flex'
+        home.style.display = 'flex'
     }
 
 }
@@ -303,7 +318,7 @@ heartRating.forEach((rating) => {
 const config = document.querySelector('.iconConfig'); 
 const popUser = document.querySelector('.popUpUser'); 
 const home = document.querySelector('.userHome')
-const overlay = document.querySelector('.overlay');
+const overlay2 = document.querySelector('.overlay2');
 
 config.addEventListener('click', popUpOpen);
 
@@ -311,15 +326,9 @@ config.addEventListener('click', popUpOpen);
 function popUpOpen() {
     const Visible = popUser.style.display === 'flex';
     popUser.style.display = Visible ? 'none' : 'flex'; 
-    overlay.style.display = Visible ? 'none' : 'block';
+    overlay2.style.display = Visible ? 'none' : 'block';
 
 }
-
-/* Modal plus da tela Home */
-
-const newQuestion = document.querySelector(".newQuestion")
-const newtest = document.querySelector(".newtest")
-const homeUser = document.querySelector('.userHome')
 
 document.addEventListener('click', function(event) {
 
@@ -343,10 +352,58 @@ document.addEventListener('click', function(event) {
     }
 });
 
-newQuestion.addEventListener('click', function(e){
-    e.preventDefault()
 
-    homeUser.style.display = 'none'
-    sectionCreatQuestion.style.display = 'flex'
+/* Adicionar tags para uma busca mais rapida */
+
+const addCategoryInput = document.querySelector(".AddCategory");
+
+
     
-})
+addCategoryInput.addEventListener('keydown', (event) =>{
+        if(event.key === "Enter"){
+            createCategory()
+            event.preventDefault()
+        }
+    })
+
+
+function createCategory() {
+
+    const addCategoryValue = addCategoryInput.value.trim();
+    const categoryContainer = document.querySelector(".categoria");
+    const tags = categoryContainer.querySelectorAll('.group')
+
+    if(tags.length >= 3){
+        alert("Voçe só pode adicionar 3 tags.")
+        return
+    }
+    
+    if (addCategoryValue === "") {
+        alert("Por favor, insira uma categoria válida.");
+        return;
+    }
+
+    
+    const groupDiv = document.createElement("div");
+    groupDiv.classList.add("group");
+
+    const categoryParagraph = document.createElement("p");
+    categoryParagraph.textContent = addCategoryValue;
+
+    const removeIcon = document.createElement("span");
+    removeIcon.innerHTML = "<i class='bx bx-x'></i>";
+    removeIcon.style.cursor = "pointer";
+
+    
+    removeIcon.addEventListener("click", () => {
+        groupDiv.remove();
+    });
+
+    categoryParagraph.appendChild(removeIcon);
+    groupDiv.appendChild(categoryParagraph);
+
+
+    categoryContainer.appendChild(groupDiv);
+
+    addCategoryInput.value = "";
+}

@@ -35,10 +35,6 @@ function handleCredentialResponse(response) {
       
 
 function triggerGoogleLogin() {
-       document.querySelector('#buttonDiv div').click(); 
+      document.querySelector('#buttonDiv div').click(); 
       console.log('botao acionado')
 } 
-
-    
-  
- 

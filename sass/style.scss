@@ -474,6 +474,7 @@ $backgound-linear: #004B87, #04345A;
     background: linear-gradient(to left, $prymary-color, $prymary-color, $prymary-color);
     border-radius: 0px 0px 27px 27px;
     padding: 20px 10px;
+    gap: 12px;
 }
 .dataUser{
     width: 90%;
@@ -484,6 +485,8 @@ $backgound-linear: #004B87, #04345A;
     width: 20%;
     height: 20%;
     border-radius: 50%;
+    max-width: 30%;
+    max-height: 30%;
 }
 .dataUser h1{
     font-size: 24px;
@@ -778,8 +781,10 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 8px;
+    flex-wrap: wrap;
+    
 }
 .categoria span i{
     font-size: 22px;
@@ -790,11 +795,14 @@ $backgound-linear: #004B87, #04345A;
 .group{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: $gray-color-2;
     border-radius: 10px;
-    width: 104px;
-    height: 30px;
+    padding: 3px 5px;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    word-break: break-word;
 }
 .group p{
     display: flex;
@@ -804,6 +812,10 @@ $backgound-linear: #004B87, #04345A;
     font-weight: 500;
     color: $gray-color;
     gap: 5px;
+}
+.group span{
+    display: flex;
+    align-items: center;
 }
 
 .gabarito{
@@ -1184,6 +1196,7 @@ $backgound-linear: #004B87, #04345A;
     height: auto;
     display: flex;
     gap: 2px;
+    align-items: center;
 }
 .stars i{
     font-size: 12px;
@@ -1225,7 +1238,7 @@ $backgound-linear: #004B87, #04345A;
     background-color: #fff;
     border-radius: 10px;
     z-index: 999;
-    animation: puff-in 0.7s ease-in-out;
+    animation: puff-in 0.5s ease-in-out;
     
 }
 
@@ -1619,7 +1632,7 @@ $backgound-linear: #004B87, #04345A;
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 16px;
     gap: 10px;
 }
@@ -1638,7 +1651,7 @@ $backgound-linear: #004B87, #04345A;
 }
 .midias img{
         width: 70%;
-    }
+}
 
     /* Responsividade da section create question */
 
@@ -1649,7 +1662,7 @@ $backgound-linear: #004B87, #04345A;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 3px;
     }
     .gabarito{
@@ -1677,8 +1690,76 @@ $backgound-linear: #004B87, #04345A;
         font-size: 10px;
     }
     
+    /* Responsavidade home */
+
+.homePage{
+        width: 100%;
+        height: 50%;
+        justify-content: space-evenly;
+        gap: 8px;
+    }
+.dataUser h1{
+        font-size: 18px;
+    }
+.dataUser p{
+    font-size: 12px;
+}
+
+.homePage img{
+    width: 15%;
+    height: 15%;
+    margin-left: 0.5em;
+}
+
+.iconConfig i{
+    font-size: 22px;
+    margin-right: 0.2em;
+}
+
+.performance p{
+    font-size: 14px;
+}
+.performance i{
+    font-size: 18px;
+}
+.homeTests p{
+    font-size: 14px;
+}
+.last-teste{
+    width: 100%;
+    height: 50%;
+}
+.prime-teste h2{
+    font-size: 16px;
+}
+.prime-teste p{
+    font-size: 10px;
+}
+.containerTests h2{
+    font-size: 14px;
+}
+.containerTests p{
+    font-size: 10px;
+}
+.all-histor .texts{
+    gap: 0.5em;
+}
+.all-histor h2{
+    font-size: 16px;
+}
+.all-histor p{
+    font-size: 12px;
+}
+.all-histor .fa-star{
+    font-size: 10px;
+}
+.all-histor .fa-heart{
+    font-size: 18px;
+}
+
 
 }
+
 @media (max-width: 375px ){
 
     /* Responsividade da tela de login */

@@ -303,8 +303,6 @@
 
     <!-- sessão para criar as questões do quiz -->
     <section class="create-question">
-
-
         <div class="prepare-question">
             <div class="edit">
                 <span class="createBack"><img src="./assets/seta-esquerda.png" alt=""></span>
@@ -325,20 +323,17 @@
                 <label class="label-filter" for="">Categoria</label>
                 
                 <div class="search">
-                    <input type="text" placeholder="Procurar questão">
+                    <input class="AddCategory" type="text" placeholder="Adicionar Categoria">
                     <span><i class='bx bx-search' ></i></span>
                 </div>
 
                 <div class="categoria">
-                    <div class="group"><p>Categoria 1 <span><i class='bx bx-x'></i></span></p></div>
-                    <div class="group"><p>Categoria 2 <span><i class='bx bx-x'></i></span></p></div>
-                    <div class="group"><p>Categoria 3 <span><i class='bx bx-x'></i></span></p></div>
                 </div>
 
                 <div class="gabarito">
                     <button class="gab-btn1"><span><i class='bx bx-file'></i></span>Fazer gabarito</button>
                     <button class="gab-btn2"><span><i class='bx bx-upload' ></i></span>imagem</button>
-                </div>
+                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
         </div>
     </div>
 
@@ -361,7 +356,6 @@
             </div>
 
                 <div class="question">
-
                     <label for="">B</label>
                 <div class="input-question">
                     <input type="text" placeholder="loren ipsum">
@@ -439,8 +433,9 @@
     </div>
     </section>
 
-
+    <div class="overlay2"></div>
     <div class="overlay"></div>
+
     <section class="modal">
     <div class="popUpImg">
         <img src="https://centromedicoberrini.com.br/images/artigos/o-que-faz-o-medico-nefrologista-quando-procurar.jpg" alt="" class=popup-imagem>
@@ -739,7 +734,7 @@
                     </div>
                 </div>
         </div>
-        <div class="creationIcon" onclick="toggleModal()">
+        <div class="creationIcon">
             <span><i class="fa-solid fa-plus"></i></span>
             <div class="modalCreate">
                 <p class="newTest">Novo teste <span><i class='bx bx-file' ></i></span></p>
@@ -754,6 +749,7 @@
     <script src="./js/forms.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/adm.js"></script>
+    <script src="./js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </body>

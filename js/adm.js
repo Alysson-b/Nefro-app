@@ -96,6 +96,7 @@ btnGabarito.addEventListener('click', function(event){
 
 
 })
+
 btnImagen.addEventListener('click', togglePopup)
 overlay.addEventListener('click', togglePopup)
 uploadImg.addEventListener('click', togglePopup)
