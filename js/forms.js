@@ -51,6 +51,21 @@ document.addEventListener('DOMContentLoaded', () =>{
     const newQuestion = document.querySelector(".newQuestion")
     const newtest = document.querySelector(".newtest")
     const allTest = document.querySelector('.all-tests')
+    
+
+
+
+let list = document.querySelectorAll(".navigation li");
+list[0].classList.add("active");
+
+function activeLink() {
+    list.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
+}
+
+list.forEach((item) => item.addEventListener("click", activeLink));
+
+
 
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
@@ -118,6 +133,12 @@ newQuestion.addEventListener('click', function(e){
     allTest.style.display = 'none'
     sectionCreatQuestion.style.display = "flex"
     
+})
+
+all.addEventListener("click", (e)=>{
+    e.preventDefault()
+    home.style.display = "none"
+    allTest.style.display = "flex"
 })
 
 
@@ -319,6 +340,13 @@ const config = document.querySelector('.iconConfig');
 const popUser = document.querySelector('.popUpUser'); 
 const home = document.querySelector('.userHome')
 const overlay2 = document.querySelector('.overlay2');
+const all = document.querySelector(".icon-tests p")
+
+all.addEventListener("click", (e)=>{
+    e.preventDefault()
+    home.style.display = "none"
+    allTest.style.display = "flex"
+})
 
 config.addEventListener('click', popUpOpen);
 

@@ -627,13 +627,14 @@ $backgound-linear: #004B87, #04345A;
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     background-color: $gray-color-2;
     z-index: 0;
+    position: relative;
 }
 
 .edit{
@@ -1116,10 +1117,95 @@ $backgound-linear: #004B87, #04345A;
     border-radius: 10px;
 }
 
+
+
+/* Estilizaçao da barra de navegaçao */
+
+.navigation{
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to left, $prymary-color, $prymary-color, $secondy-color ) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0px 0px;
+    transition: width 0.3s;
+}
+
+.navigation ul{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.navigation ul li a i{
+    font-size: 1em;
+    color: $white-color;
+    line-height: 75px;
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+.navigation ul li.active a i{
+    opacity: 1;
+    color: $secondy-color;
+    transform: translateY(-10px);
+    font-size: 1.3em;
+}
+
+.indicador{
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    width: 70px;
+    height: 70px;
+    background: $white-color;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border: 6px solid $white-color;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.indicador span{
+    position: absolute;
+    left: -1px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid $secondy-color;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(0.85);
+}
+
+.navigation ul li:nth-child(2).active ~ .indicador {
+    transform: translateX(109px);
+}
+
+.navigation ul li:nth-child(3).active ~ .indicador {
+    transform: translateX(216px);
+}
+
 /* Estilizaçao da tela de historico */
 
 .historico{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -1369,9 +1455,17 @@ $backgound-linear: #004B87, #04345A;
         margin: 20px 0px;
         width: 100%;
         position: relative;
+    }
+    
+.filter-input{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
 }
 
-.filter-header-testes input{
+.filter-input input{
         display: flex;
         width: 95%;
         height: 53px;
@@ -1380,13 +1474,6 @@ $backgound-linear: #004B87, #04345A;
         font-size: 16px;
         font-weight: 400;
         border: none;
-}
-.filter-input{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
 }
 
 .filter-header-testes span{
