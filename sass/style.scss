@@ -59,7 +59,7 @@ $backgound-linear: #004B87, #04345A;
 }
 
 .container{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -622,7 +622,6 @@ $backgound-linear: #004B87, #04345A;
 
 
 
-
 /* tela EXCLUSIVA DO ADM  */
 /* Estilizaçao da tela para criar questao */
 
@@ -1128,9 +1127,10 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 -10px 20px rgb(255, 255, 255, 0.6);
+    border-radius: 12px 12px 0px 0px;
     transition: width 0.3s;
+
 }
 
 .navigation ul{
@@ -1173,13 +1173,13 @@ $backgound-linear: #004B87, #04345A;
 .indicador{
     position: absolute;
     top: -6px;
-    left: 16px;
+    left: 17.5px;
     width: 70px;
     height: 70px;
-    background: $white-color;
+    background: $gray-color-2;
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
-    border: 6px solid $white-color;
+    border: 6px solid $gray-color-2;
     cursor: pointer;
     transition: 0.6s;
 }
@@ -1194,18 +1194,22 @@ $backgound-linear: #004B87, #04345A;
     transform: scale(0.85);
 }
 
+.hidden{
+    display: none;
+}
+
 .navigation ul li:nth-child(2).active ~ .indicador {
-    transform: translateX(109px);
+    transform: translateX(107px);
 }
 
 .navigation ul li:nth-child(3).active ~ .indicador {
-    transform: translateX(216px);
+    transform: translateX(213px);
 }
 
 /* Estilizaçao da tela de historico */
 
 .historico{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -1521,7 +1525,7 @@ $backgound-linear: #004B87, #04345A;
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 10px;
+    bottom: 85px;
     right: 10px;
     background: $orange-color;
     width: 50px;
@@ -1537,7 +1541,7 @@ $backgound-linear: #004B87, #04345A;
 .modalCreate{
     position: absolute;
     right: 62px;
-    bottom: 0;
+    bottom: 0px;
     background-color: $orange-color;
     color: $white-color;
     padding: 10px;

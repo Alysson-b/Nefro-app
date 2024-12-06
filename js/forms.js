@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     /* variaveis da section de create-question / historico */
     const sectionCreatQuestion = document.querySelector('.create-question')
     const editBtn = document.querySelector('.createBack')
-    const editHistBtn = document.getElementById('historico')
+    const editHistBtn = document.querySelector('.historico')
     const histBack = document.querySelector('.histrBack')
     const starsRating = document.querySelectorAll('.stars')
     const heartRating = document.querySelectorAll('.iconHeart')
@@ -53,9 +53,69 @@ document.addEventListener('DOMContentLoaded', () =>{
     const allTest = document.querySelector('.all-tests')
     
 
+    const iconHome = document.querySelector('.house')
+    const iconBook = document.querySelector('.book')
+    const iconClock = document.querySelector('.clock')
 
 
-let list = document.querySelectorAll(".navigation li");
+
+    const screens = {
+        userHome: document.querySelector('.userHome'),
+        allTests: document.querySelector('.all-tests'),
+        historico: document.querySelector('.historico'),
+    };
+
+    // Caso algum elemento não seja encontrado, um erro será mostrado
+    if (!screens.allTests) {
+        console.error('Erro: O elemento .all-tests não foi encontrado no DOM.');
+    }
+
+    // Função para ocultar todas as telas
+    function hideAllScreens() {
+        Object.values(screens).forEach(screen => {
+            if (screen) {
+                console.log(`Ocultando tela: ${screen.className}`);
+                screen.style.display = 'none'; // Oculta a tela
+            }
+        });
+    }
+
+    // Ícones da barra de navegação
+    const icons = [
+        { element: document.querySelector('.house'), target: 'userHome' },
+        { element: document.querySelector('.book'), target: 'allTests' },
+        { element: document.querySelector('.clock'), target: 'historico' },
+    ];
+
+    // Lógica de navegação
+    icons.forEach(icon => {
+        if (!icon.element) {
+            console.error(`Erro: Ícone da navegação não encontrado para "${icon.target}".`);
+            return; // Ignora este ícone
+        }
+
+        icon.element.addEventListener('click', function () {
+            console.log(`Clicou no ícone: ${icon.target}`);
+            hideAllScreens(); // Oculta todas as telas
+
+            const targetScreen = screens[icon.target];
+            if (targetScreen) {
+                targetScreen.style.display = 'flex'; // Exibe a tela correspondente
+                console.log(`Navegando para a tela "${icon.target}"`); // Log para depuração
+            } else {
+                console.error(`Erro: A tela "${icon.target}" não existe.`);
+            }
+        });
+    });
+
+    // Inicializa a tela padrão
+   /*  hideAllScreens(); // Oculta todas as telas inicialmente
+    if (screens.userHome) {
+        screens.userHome.style.display = 'flex'; // Exibe a tela inicial
+    }
+ */
+
+const list = document.querySelectorAll(".navigation li");
 list[0].classList.add("active");
 
 function activeLink() {
@@ -64,6 +124,7 @@ function activeLink() {
 }
 
 list.forEach((item) => item.addEventListener("click", activeLink));
+
 
 
 
