@@ -45,8 +45,6 @@ document.addEventListener('DOMContentLoaded', () =>{
     const heartRating = document.querySelectorAll('.iconHeart')
     
 
-    
-
     /* variaveis da tela all test */
     const newQuestion = document.querySelector(".newQuestion")
     const newtest = document.querySelector(".newtest")
@@ -56,64 +54,67 @@ document.addEventListener('DOMContentLoaded', () =>{
     const iconHome = document.querySelector('.house')
     const iconBook = document.querySelector('.book')
     const iconClock = document.querySelector('.clock')
-
-
-
-    const screens = {
-        userHome: document.querySelector('.userHome'),
-        allTests: document.querySelector('.all-tests'),
-        historico: document.querySelector('.historico'),
-    };
-
-    // Caso algum elemento não seja encontrado, um erro será mostrado
-    if (!screens.allTests) {
-        console.error('Erro: O elemento .all-tests não foi encontrado no DOM.');
+    
+    
+    function showSection(sectionToShow) {
+        
+        const sections = [home, allTest, editHistBtn];
+        sections.forEach(section => section.style.display = "none");
+        
+        sectionToShow.style.display = "flex";
     }
-
-    // Função para ocultar todas as telas
-    function hideAllScreens() {
-        Object.values(screens).forEach(screen => {
-            if (screen) {
-                console.log(`Ocultando tela: ${screen.className}`);
-                screen.style.display = 'none'; // Oculta a tela
-            }
+    
+/*    
+    const allowedSections = ["userHome", "all-tests", "historico"];
+    const sections = document.querySelectorAll('section'); 
+    const navigation = document.querySelector('.navigation');
+    
+    function showSection(sectionToShow) {
+        // Esconde todas as seções
+        sections.forEach(section => {
+            section.classList.remove('active'); // Remove a classe 'active'
+            section.style.display = "none"; // Esconde a seção
         });
-    }
-
-    // Ícones da barra de navegação
-    const icons = [
-        { element: document.querySelector('.house'), target: 'userHome' },
-        { element: document.querySelector('.book'), target: 'allTests' },
-        { element: document.querySelector('.clock'), target: 'historico' },
-    ];
-
-    // Lógica de navegação
-    icons.forEach(icon => {
-        if (!icon.element) {
-            console.error(`Erro: Ícone da navegação não encontrado para "${icon.target}".`);
-            return; // Ignora este ícone
+    
+        // Mostra a seção desejada
+        if (sectionToShow) {
+            sectionToShow.classList.add('active'); // Adiciona a classe 'active'
+            sectionToShow.style.display = "flex"; // Torna visível
         }
-
-        icon.element.addEventListener('click', function () {
-            console.log(`Clicou no ícone: ${icon.target}`);
-            hideAllScreens(); // Oculta todas as telas
-
-            const targetScreen = screens[icon.target];
-            if (targetScreen) {
-                targetScreen.style.display = 'flex'; // Exibe a tela correspondente
-                console.log(`Navegando para a tela "${icon.target}"`); // Log para depuração
-            } else {
-                console.error(`Erro: A tela "${icon.target}" não existe.`);
-            }
-        });
-    });
-
-    // Inicializa a tela padrão
-   /*  hideAllScreens(); // Oculta todas as telas inicialmente
-    if (screens.userHome) {
-        screens.userHome.style.display = 'flex'; // Exibe a tela inicial
+    
+        // Verifica se a seção atual está na lista de seções permitidas
+        const isAllowedSection = allowedSections.some(className => 
+            sectionToShow?.classList.contains(className)
+        );
+    
+        // Controla a visibilidade da navegação
+        if (navigation) {
+            navigation.style.display = isAllowedSection ? "flex" : "none";
+        }
     }
- */
+    
+    function navigateToSection(sectionClass) {
+        const targetSection = document.querySelector(`.${sectionClass}`);
+        if (targetSection) {
+            showSection(targetSection);
+        } else {
+            console.error(`Seção com a classe '${sectionClass}' não encontrada.`);
+        }
+    } */
+
+
+iconHome.addEventListener('click', function(e){
+    e.preventDefault()
+    showSection(home)
+})
+iconBook.addEventListener('click', function(e){
+    e.preventDefault()
+    showSection(allTest)
+})
+iconClock.addEventListener('click', function(e){
+    e.preventDefault()
+    showSection(editHistBtn)
+})
 
 const list = document.querySelectorAll(".navigation li");
 list[0].classList.add("active");
@@ -124,8 +125,6 @@ function activeLink() {
 }
 
 list.forEach((item) => item.addEventListener("click", activeLink));
-
-
 
 
 registButton.addEventListener('click', (event) =>{
@@ -188,6 +187,7 @@ histBack.addEventListener('click', ()=>{
     editHistBtn.style.display = 'none'
 
 })
+
 newQuestion.addEventListener('click', function(e){
     e.preventDefault()
 
@@ -201,7 +201,6 @@ all.addEventListener("click", (e)=>{
     home.style.display = "none"
     allTest.style.display = "flex"
 })
-
 
     /* transiçao da tela inicial */
 window.onload = function () {
@@ -228,7 +227,6 @@ window.onload = function () {
     }, 500); 
 }; 
 
-
 function  login(){
     const loginEmailValue = loginEmail.value.trim()
     const loginPassValue = loginPass.value.trim()
@@ -251,7 +249,6 @@ function checkInputs(){
     let error = false;
     divMessage.innerHTML = ''; 
 
-
     if(userNameValue === "" || passNameValue === "" || passNameConfirmationValue === "" || registEmailValue === ""){
         const message = document.createElement('p')
         message.textContent = 'Campos obrigatorios'
@@ -273,9 +270,9 @@ function checkInputs(){
         error = true;
         return
 
-    }else if(userNameValue.length < 10){
+    }else if(userNameValue.length < 6){
         const message = document.createElement('p')
-        message.textContent = 'O nome tem que ter no mínimo 10 caracteres.'
+        message.textContent = 'O nome tem que ter no mínimo 6 caracteres.'
         divMessage.appendChild(message)
         formRegist.classList.add('error')
         error = true;
@@ -286,7 +283,6 @@ function checkInputs(){
     }
 
     /* VALIDAÇAO DA SENHA SO USUARIO */
-
 
     if(passNameValue === "" ){
         const message = document.createElement('p')
@@ -307,7 +303,6 @@ function checkInputs(){
         formRegist.classList.remove('error')
         error = false
     }
-
 
     /* VALIDAÇAO DA CONFIRMAÇAO DE SENHA DO USUARIO */
 
@@ -345,15 +340,13 @@ function checkInputs(){
         formRegist.classList.remove('error')
         error = false
     }
-
-
 }
 
 function validEmail(email){
-
         const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/;
         return regexEmail.test(email);
 }
+
 
 
 
@@ -393,7 +386,6 @@ heartRating.forEach((rating) => {
         })
     })
 })
-
 
     /* variais da tela Home */
 
@@ -442,12 +434,11 @@ document.addEventListener('click', function(event) {
 });
 
 
-/* Adicionar tags para uma busca mais rapida */
 
+/* Adicionar tags para uma busca mais rapida */
 const addCategoryInput = document.querySelector(".AddCategory");
 
 
-    
 addCategoryInput.addEventListener('keydown', (event) =>{
         if(event.key === "Enter"){
             createCategory()
