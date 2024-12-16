@@ -43,7 +43,7 @@
 }
 
 .container {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -456,7 +456,7 @@
 
 /*  tela princpal da home */
 .userHome {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -632,6 +632,69 @@
   align-items: center;
   flex-direction: column;
   margin: 10px 0px 0px;
+}
+
+.boxHome {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.imgCurso {
+  width: 50%;
+}
+
+.imgCurso img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.boxHomeTexts {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.boxHomeTexts h2 {
+  font-size: 19px;
+  font-weight: bold;
+  color: #000;
+}
+
+.boxHomeTags {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.boxHomeTags span {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #ababab;
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px 5px;
+}
+
+.boxHomePorcetagem {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ababab;
 }
 
 /* tela EXCLUSIVA DO ADM  */
@@ -1356,6 +1419,7 @@
 .porcetagem {
   font-size: 14px;
   font-weight: 400;
+  color: #ababab;
 }
 
 .iconHeart i {
