@@ -535,7 +535,7 @@
   flex-direction: column;
   width: 90%;
   height: 100%;
-  margin: 30px 0px 0px;
+  margin: 20px 0px 0px;
 }
 
 .homeTests p {
@@ -695,6 +695,160 @@
   font-size: 14px;
   font-weight: 400;
   color: #ababab;
+}
+
+/* Desempenho do usuario */
+.boxDesempenho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.boxDesempenho.active {
+  max-height: 500px;
+  opacity: 1;
+  animation: scale-in-top 0.5s ease-in-out;
+}
+
+.dadosDesempenho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 12px;
+}
+
+.rendimento {
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.rendimento h2 {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ababab;
+}
+
+.rendimento .fa-arrow-trend-up {
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.rendimento .porcentagem {
+  font-size: 19px;
+  font-weight: bold;
+  color: #04345A;
+}
+
+.totalDeQuestoes {
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.totalDeQuestoes h2 {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ababab;
+}
+
+.totalDeQuestoes .fa-graduation-cap {
+  background-color: #00679A;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.totalDeQuestoes .porcentagem {
+  font-size: 19px;
+  font-weight: bold;
+  color: #04345A;
+}
+
+.totalAcertos {
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.totalAcertos h2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ababab;
+}
+
+.totalAcertos .fa-check {
+  background-color: #129820;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.totalAcertos .porcentagem {
+  font-size: 19px;
+  font-weight: bold;
+  color: #04345A;
+}
+
+.totalErros {
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.totalErros h2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ababab;
+}
+
+.totalErros .fa-x {
+  background-color: #f30000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.totalErros .porcentagem {
+  font-size: 19px;
+  font-weight: bold;
+  color: #04345A;
 }
 
 /* tela EXCLUSIVA DO ADM  */
@@ -1219,7 +1373,7 @@
 
 /* Estilizaçao da barra de navegaçao */
 .navigation {
-  display: none;
+  display: flex;
   width: 100%;
   height: 80px;
   background: linear-gradient(to left, #04345A, #04345A, #00679A);
@@ -1228,10 +1382,11 @@
   box-shadow: 0 -10px 20px rgba(255, 255, 255, 0.6);
   border-radius: 12px 12px 0px 0px;
   transition: width 0.3s;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 999;
+  animation: slide-top 0.6s ease-in-out;
 }
 
 .navigation ul {
@@ -1300,6 +1455,9 @@
 
 .hidden {
   display: none;
+  transform: translate(100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .navigation ul li:nth-child(2).active ~ .indicador {
@@ -1800,6 +1958,26 @@
     opacity: 1;
   }
 }
+@keyframes slide-top {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes scale-in-top {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
 @media (max-width: 320px) {
   /* Responsividade da tela de login */
   #main_container {
@@ -1979,6 +2157,7 @@
   .all-histor .fa-heart {
     font-size: 18px;
   }
+  /* barra de navegaçao */
 }
 @media (max-width: 375px) {
   /* Responsividade da tela de login */
@@ -2094,6 +2273,29 @@
   #msgError {
     font-size: 17px;
   }
+  /* barra de navegaçao */
+  /* .indicador{
+      position: absolute;
+      top: -6px;
+      left: 26px;
+      width: 70px;
+      height: 70px;
+      background: $gray-color-2;
+      border-bottom-left-radius: 35px;
+      border-bottom-right-radius: 35px;
+      border: 6px solid $gray-color-2;
+      cursor: pointer;
+      transition: 0.6s;
+  }
+
+
+      .navigation ul li:nth-child(2).active ~ .indicador {
+          transform: translateX(126px);
+      }
+
+      .navigation ul li:nth-child(3).active ~ .indicador {
+          transform: translateX(251px);
+      } */
 }
 
 /*# sourceMappingURL=style.css.map */

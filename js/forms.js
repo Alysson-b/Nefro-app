@@ -54,7 +54,20 @@ document.addEventListener('DOMContentLoaded', () =>{
     const iconHome = document.querySelector('.house')
     const iconBook = document.querySelector('.book')
     const iconClock = document.querySelector('.clock')
+    const navigation = document.querySelector('.navigation');
     
+    let scrollTop = 0
+
+    window.addEventListener("scroll", ()=>{
+        const scroll = window.pageYOffset || document.documentElement.scroll;
+
+        if(scroll > scrollTop){
+            navigation.classList.add("hidden")
+        }else{
+            navigation.classList.remove("hidden")
+        }
+        scrollTop = scroll
+    })
     
     function showSection(sectionToShow) {
         
@@ -67,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 /*    
     const allowedSections = ["userHome", "all-tests", "historico"];
     const sections = document.querySelectorAll('section'); 
-    const navigation = document.querySelector('.navigation');
     
     function showSection(sectionToShow) {
         // Esconde todas as seções
@@ -200,6 +212,12 @@ all.addEventListener("click", (e)=>{
     e.preventDefault()
     home.style.display = "none"
     allTest.style.display = "flex"
+})
+
+document.querySelector('.iconPerf').addEventListener("click", ()=>{
+    const dadosDesempenho = document.querySelector(".boxDesempenho")
+
+    dadosDesempenho.classList.toggle('active')
 })
 
     /* transiçao da tela inicial */
