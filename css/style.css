@@ -1460,14 +1460,6 @@
   pointer-events: none;
 }
 
-.navigation ul li:nth-child(2).active ~ .indicador {
-  transform: translateX(107px);
-}
-
-.navigation ul li:nth-child(3).active ~ .indicador {
-  transform: translateX(213px);
-}
-
 /* Estilizaçao da tela de historico */
 .historico {
   display: none;
@@ -2273,29 +2265,6 @@
   #msgError {
     font-size: 17px;
   }
-  /* barra de navegaçao */
-  /* .indicador{
-      position: absolute;
-      top: -6px;
-      left: 26px;
-      width: 70px;
-      height: 70px;
-      background: $gray-color-2;
-      border-bottom-left-radius: 35px;
-      border-bottom-right-radius: 35px;
-      border: 6px solid $gray-color-2;
-      cursor: pointer;
-      transition: 0.6s;
-  }
-
-
-      .navigation ul li:nth-child(2).active ~ .indicador {
-          transform: translateX(126px);
-      }
-
-      .navigation ul li:nth-child(3).active ~ .indicador {
-          transform: translateX(251px);
-      } */
 }
 
 /*# sourceMappingURL=style.css.map */

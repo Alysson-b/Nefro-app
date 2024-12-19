@@ -51,10 +51,16 @@ document.addEventListener('DOMContentLoaded', () =>{
     const allTest = document.querySelector('.all-tests')
     
 
+    /* barra de navegaçao */
+
     const iconHome = document.querySelector('.house')
     const iconBook = document.querySelector('.book')
     const iconClock = document.querySelector('.clock')
     const navigation = document.querySelector('.navigation');
+    const navBar = document.querySelector('.navigation ul');
+    const indicator = document.querySelector('.indicador');
+    const navItems = document.querySelectorAll('.navigation ul li');
+    
     
     let scrollTop = 0
 
@@ -77,42 +83,29 @@ document.addEventListener('DOMContentLoaded', () =>{
         sectionToShow.style.display = "flex";
     }
     
-/*    
-    const allowedSections = ["userHome", "all-tests", "historico"];
-    const sections = document.querySelectorAll('section'); 
-    
-    function showSection(sectionToShow) {
-        // Esconde todas as seções
-        sections.forEach(section => {
-            section.classList.remove('active'); // Remove a classe 'active'
-            section.style.display = "none"; // Esconde a seção
-        });
-    
-        // Mostra a seção desejada
-        if (sectionToShow) {
-            sectionToShow.classList.add('active'); // Adiciona a classe 'active'
-            sectionToShow.style.display = "flex"; // Torna visível
-        }
-    
-        // Verifica se a seção atual está na lista de seções permitidas
-        const isAllowedSection = allowedSections.some(className => 
-            sectionToShow?.classList.contains(className)
-        );
-    
-        // Controla a visibilidade da navegação
-        if (navigation) {
-            navigation.style.display = isAllowedSection ? "flex" : "none";
-        }
+function updateIndicator() {
+    const activeItem = document.querySelector('.navigation ul li.active');
+    if (activeItem) {
+        const activeRect = activeItem.getBoundingClientRect();
+        const navRect = navBar.getBoundingClientRect();
+
+        const leftOffset = activeRect.left - navRect.left + (activeRect.width / 2) - (indicator.offsetWidth / 2);
+
+        indicator.style.left = `${leftOffset}px`;
     }
-    
-    function navigateToSection(sectionClass) {
-        const targetSection = document.querySelector(`.${sectionClass}`);
-        if (targetSection) {
-            showSection(targetSection);
-        } else {
-            console.error(`Seção com a classe '${sectionClass}' não encontrada.`);
-        }
-    } */
+}
+
+navItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        navItems.forEach((i) => i.classList.remove('active'));
+        item.classList.add('active');
+        updateIndicator(); 
+    });
+});
+
+window.addEventListener('resize', updateIndicator);
+
+updateIndicator();
 
 
 iconHome.addEventListener('click', function(e){

@@ -159,4 +159,42 @@ function triggerGoogleLogin() {
       }
       
       window.addEventListener("load", loadUserData);
-      
+
+
+
+
+
+
+/* const navBar = document.querySelector('.navigation ul');
+const indicator = document.querySelector('.indicador');
+const navItems = document.querySelectorAll('.navigation ul li');
+
+function updateIndicator() {
+    const activeItem = document.querySelector('.navigation ul li.active');
+    if (activeItem) {
+        const activeRect = activeItem.getBoundingClientRect();
+        const navRect = navBar.getBoundingClientRect();
+
+        // Centraliza o indicador
+        const leftOffset = activeRect.left - navRect.left + (activeRect.width / 2) - (indicator.offsetWidth / 2);
+
+        // Atualiza a posição do indicador
+        indicator.style.left = `${leftOffset}px`;
+    }
+}
+
+// Adiciona evento de clique para ativar o item clicado e reposicionar o indicador
+navItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        navItems.forEach((i) => i.classList.remove('active')); // Remove a classe ativa de todos os itens
+        item.classList.add('active'); // Adiciona a classe ativa ao item clicado
+        updateIndicator(); // Atualiza o indicador
+    });
+});
+
+// Atualiza o indicador ao redimensionar a tela
+window.addEventListener('resize', updateIndicator);
+
+// Atualiza o indicador inicialmente
+updateIndicator();
+ */
