@@ -162,39 +162,76 @@ function triggerGoogleLogin() {
 
 
 
+const iconCreatModal = document.querySelector('.text-icon i')
+const textQuest = document.querySelector('#textQuest')
+const iconsResp = document.querySelectorAll(".icon-question i");
+const inputsResp = document.querySelectorAll(".input-question input");
 
 
 
-/* const navBar = document.querySelector('.navigation ul');
-const indicator = document.querySelector('.indicador');
-const navItems = document.querySelectorAll('.navigation ul li');
 
-function updateIndicator() {
-    const activeItem = document.querySelector('.navigation ul li.active');
-    if (activeItem) {
-        const activeRect = activeItem.getBoundingClientRect();
-        const navRect = navBar.getBoundingClientRect();
+iconCreatModal.addEventListener('click', function(){
+    
+  const modalText = textQuest.value.trim()
 
-        // Centraliza o indicador
-        const leftOffset = activeRect.left - navRect.left + (activeRect.width / 2) - (indicator.offsetWidth / 2);
+  
+  if (modalText) {
 
-        // Atualiza a posição do indicador
-        indicator.style.left = `${leftOffset}px`;
-    }
-}
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay';
+    modal.innerHTML = `
+      <div class="modal-content">
+        <p>${modalText}</p>
+        <button class="close-modal">X</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
 
-// Adiciona evento de clique para ativar o item clicado e reposicionar o indicador
-navItems.forEach((item) => {
-    item.addEventListener('click', () => {
-        navItems.forEach((i) => i.classList.remove('active')); // Remove a classe ativa de todos os itens
-        item.classList.add('active'); // Adiciona a classe ativa ao item clicado
-        updateIndicator(); // Atualiza o indicador
+    const closeModal = document.querySelector('.close-modal');
+    closeModal.addEventListener('click', function () {
+      modal.remove();
     });
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
+  } else {
+    console.log('Erro: o campo de texto está vazio.');
+  }
 });
 
-// Atualiza o indicador ao redimensionar a tela
-window.addEventListener('resize', updateIndicator);
 
-// Atualiza o indicador inicialmente
-updateIndicator();
- */
+
+iconsResp.forEach((icon, index) => {
+  icon.addEventListener("click", function () {
+    const inputValue = inputsResp[index].value.trim();
+
+    if (inputValue) {
+      const modalResposta = document.createElement("div");
+      modalResposta.className = "Respostas";
+      modalResposta.innerHTML = `
+        <div class="modal-content">
+          <p>${inputValue}</p>
+          <button class="close-Respostas">X</button>
+        </div>
+      `;
+
+      document.body.appendChild(modalResposta);
+
+      modalResposta.addEventListener("click", function (e) {
+        if (e.target === modalResposta) {
+          modalResposta.remove();
+        }
+      });
+
+      const closeModal = modalResposta.querySelector(".close-Respostas");
+      closeModal.addEventListener("click", function () {
+        modalResposta.remove();
+      });
+    } else {
+      console.log("Erro: o campo de texto está vazio.");
+    }
+  });
+});

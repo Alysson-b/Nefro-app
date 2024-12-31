@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     /* variaveis da section de create-question / historico */
+    
     const sectionCreatQuestion = document.querySelector('.create-question')
     const editBtn = document.querySelector('.createBack')
     const editHistBtn = document.querySelector('.historico')
@@ -103,8 +104,8 @@ navItems.forEach((item) => {
     });
 });
 
-window.addEventListener('resize', updateIndicator);
 
+window.addEventListener('resize', updateIndicator);
 updateIndicator();
 
 
@@ -121,8 +122,10 @@ iconClock.addEventListener('click', function(e){
     showSection(editHistBtn)
 })
 
+
 const list = document.querySelectorAll(".navigation li");
 list[0].classList.add("active");
+
 
 function activeLink() {
     list.forEach((item) => item.classList.remove("active"));
@@ -201,6 +204,7 @@ newQuestion.addEventListener('click', function(e){
     
 })
 
+
 all.addEventListener("click", (e)=>{
     e.preventDefault()
     home.style.display = "none"
@@ -212,6 +216,7 @@ document.querySelector('.iconPerf').addEventListener("click", ()=>{
 
     dadosDesempenho.classList.toggle('active')
 })
+
 
     /* transiçao da tela inicial */
 window.onload = function () {
@@ -250,6 +255,7 @@ function  login(){
     }
 
 }
+
 function checkInputs(){
 
     const userNameValue = userName.value.trim();
@@ -271,8 +277,9 @@ function checkInputs(){
         formRegist.classList.remove('error')
     }
 
+
     /* VALIDAÇAO DO NOME DE USUARIO */
-    
+
     if(userNameValue === ""){
         const message = document.createElement('p')
         message.textContent = 'Insira seu nome completo.'

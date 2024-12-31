@@ -458,7 +458,7 @@ $backgound-linear: #004B87, #04345A;
 /*  tela princpal da home */
 
 .userHome{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -831,7 +831,7 @@ $backgound-linear: #004B87, #04345A;
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1321,10 +1321,78 @@ $backgound-linear: #004B87, #04345A;
     border-radius: 10px;
 }
 
+
+/* MODAL PARA EXIBIR TEXTO DA QUESTAO */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+} 
+.modal-content {
+    background: $white-color;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    font-family: $font-family;
+    line-height: 1.6;
+    font-weight: 500;
+    color: $gray-color;
+}
+
+.close-modal {
+    background: $red-color;
+    font-family: $font-family;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MODAL DE EXIBIÇAO DE RESPOSTAS  */
+.Respostas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.close-Respostas {
+    background: $red-color;
+    color: #fff;
+    border: none;
+    padding: 2px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: $font-family;
+    font-weight: bold;
+}
+
 /* Estilizaçao da barra de navegaçao */
 
 .navigation{
-    display: flex;
+    display: none;
     width: 100%;
     height: 80px;
     background: linear-gradient(to left, $prymary-color, $prymary-color, $secondy-color ) ;
@@ -1335,7 +1403,6 @@ $backgound-linear: #004B87, #04345A;
     transition: width 0.3s;
     position: fixed;
     bottom: 0;
-
     left: 0;
     z-index: 999;
     animation: slide-top 0.6s ease-in-out;
@@ -1409,6 +1476,10 @@ $backgound-linear: #004B87, #04345A;
     opacity: 0; 
     pointer-events: none;
 }
+
+
+
+
 
 
 /* Estilizaçao da tela de historico */
