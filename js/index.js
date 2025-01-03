@@ -203,7 +203,6 @@ iconCreatModal.addEventListener('click', function(){
 });
 
 
-
 iconsResp.forEach((icon, index) => {
   icon.addEventListener("click", function () {
     const inputValue = inputsResp[index].value.trim();
@@ -235,3 +234,31 @@ iconsResp.forEach((icon, index) => {
     }
   });
 });
+
+
+/* const screens = document.querySelectorAll(".screen")
+const navScreens = ["home", "historico", "allTests"];
+
+function showScreen(screenId){
+
+    screens.forEach(screen =>{
+        screen.classList.remove("active")
+    })
+
+    const activeScreen = document.getElementById(screenId)
+    if(activeScreen){
+        activeScreen.classList.add('active')
+        
+        navigation.style.display = navScreens.includes(screenId) ? "block" : "none";
+    }
+  
+}
+showScreen('container')
+
+document.querySelectorAll('li').forEach((navItem, index) => {
+    navItem.addEventListener('click', () => {
+        showScreen(navScreens[index]);
+    });
+});  */
+
+

@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
 #main_container {
   display: flex;
   display: flex;
@@ -1391,6 +1399,9 @@
   border-radius: 8px;
   max-width: 500px;
   width: 90%;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -1411,6 +1422,28 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #ff9600;
+  border-radius: 8px;
+  height: 10px;
+  margin: 10px 0;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* MODAL DE EXIBIÇAO DE RESPOSTAS  */

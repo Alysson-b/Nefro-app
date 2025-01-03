@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () =>{
     const loginFirst = document.querySelector('#firstHref')
 
     /* Variaveis da rela de Cadastro */ 
-
     const section3 = document.querySelector('.registration')
     const formRegist = document.querySelector('#form-Regist')
     const userName = document.querySelector('#name')
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () =>{
     const divMessage = document.querySelector('#Error')
 
     /* variaveis para recuperar senha */
-
     const section2 = document.querySelector('.section-recover')
     const recoverInput = document.querySelector('#recoverPassword')
     const recoverButton = document.querySelector('#recoverEmail')
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     /* variaveis da section de create-question / historico */
-    
     const sectionCreatQuestion = document.querySelector('.create-question')
     const editBtn = document.querySelector('.createBack')
     const editHistBtn = document.querySelector('.historico')
@@ -45,15 +42,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     const starsRating = document.querySelectorAll('.stars')
     const heartRating = document.querySelectorAll('.iconHeart')
     
-
     /* variaveis da tela all test */
     const newQuestion = document.querySelector(".newQuestion")
     const newtest = document.querySelector(".newtest")
     const allTest = document.querySelector('.all-tests')
-    
 
     /* barra de navegaçao */
-
     const iconHome = document.querySelector('.house')
     const iconBook = document.querySelector('.book')
     const iconClock = document.querySelector('.clock')
@@ -61,13 +55,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     const navBar = document.querySelector('.navigation ul');
     const indicator = document.querySelector('.indicador');
     const navItems = document.querySelectorAll('.navigation ul li');
-    
-    
     let scrollTop = 0
 
     window.addEventListener("scroll", ()=>{
         const scroll = window.pageYOffset || document.documentElement.scroll;
-
         if(scroll > scrollTop){
             navigation.classList.add("hidden")
         }else{
@@ -77,10 +68,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     })
     
     function showSection(sectionToShow) {
-        
         const sections = [home, allTest, editHistBtn];
         sections.forEach(section => section.style.display = "none");
-        
         sectionToShow.style.display = "flex";
     }
     
@@ -89,13 +78,10 @@ function updateIndicator() {
     if (activeItem) {
         const activeRect = activeItem.getBoundingClientRect();
         const navRect = navBar.getBoundingClientRect();
-
         const leftOffset = activeRect.left - navRect.left + (activeRect.width / 2) - (indicator.offsetWidth / 2);
-
         indicator.style.left = `${leftOffset}px`;
     }
 }
-
 navItems.forEach((item) => {
     item.addEventListener('click', () => {
         navItems.forEach((i) => i.classList.remove('active'));
@@ -104,10 +90,36 @@ navItems.forEach((item) => {
     });
 });
 
-
 window.addEventListener('resize', updateIndicator);
 updateIndicator();
 
+/* const screens = document.querySelectorAll(".screen")
+const navScreens = ["home", "historico", "allTests"];
+
+function showScreen(screenId){
+
+    screens.forEach(screen =>{
+        screen.classList.remove("active")
+    })
+
+    const activeScreen = document.getElementById(screenId)
+    if(activeScreen){
+        activeScreen.classList.add('active')
+    }
+
+    if (activeScreen.classList.contains('create-question')) {
+        navigation.style.display = 'none';
+    } else {
+        navigation.style.display = navScreens.includes(screenId) ? "block" : "none";
+    }
+}
+showScreen('container')
+
+document.querySelectorAll('li').forEach((navItem, index) => {
+    navItem.addEventListener('click', () => {
+        showScreen(navScreens[index]);
+    });
+}); */
 
 iconHome.addEventListener('click', function(e){
     e.preventDefault()
@@ -122,18 +134,14 @@ iconClock.addEventListener('click', function(e){
     showSection(editHistBtn)
 })
 
-
 const list = document.querySelectorAll(".navigation li");
 list[0].classList.add("active");
-
 
 function activeLink() {
     list.forEach((item) => item.classList.remove("active"));
     this.classList.add("active");
 }
-
 list.forEach((item) => item.addEventListener("click", activeLink));
-
 
 registButton.addEventListener('click', (event) =>{
     event.preventDefault()
@@ -149,62 +157,47 @@ passConfirIcon.addEventListener('click', () => {
 loginPassIcon.addEventListener('click', () =>{
     togglePassword(loginPass, loginPassIcon)
 })
-
 logar.addEventListener('click', (e) =>{
     e.preventDefault();    
     section3.style.display = 'none'
     container.style.display = 'flex'
-
 })
-
 loginFirst.addEventListener('click', (e) => {
     e.preventDefault()
     container.style.display = 'none'
     section3.style.display = 'flex'
 })  
-
 lembrarSenha.addEventListener('click', (e) => {
     e.preventDefault();
-
     container.style.display = 'none'
     section2.style.display = 'flex'
     
 })
-
 recoverHref.addEventListener('click', (e) =>{
     e.preventDefault();
-
     section2.style.display = 'none'
     container.style.display = 'flex'
 })
-
 loginButton.addEventListener('click', (e) =>{
     e.preventDefault()
     login();
-
+    showScreen("home")
 })
-
 editBtn.addEventListener('click', ()=>{
     home.style.display = 'flex'
     sectionCreatQuestion.style.display = 'none'
-
 })
-
 histBack.addEventListener('click', ()=>{
     home.style.display = 'flex'
     editHistBtn.style.display = 'none'
-
 })
 
 newQuestion.addEventListener('click', function(e){
     e.preventDefault()
-
     allTest.style.display = 'none'
     sectionCreatQuestion.style.display = "flex"
     
 })
-
-
 all.addEventListener("click", (e)=>{
     e.preventDefault()
     home.style.display = "none"
@@ -213,32 +206,23 @@ all.addEventListener("click", (e)=>{
 
 document.querySelector('.iconPerf').addEventListener("click", ()=>{
     const dadosDesempenho = document.querySelector(".boxDesempenho")
-
     dadosDesempenho.classList.toggle('active')
 })
-
 
     /* transiçao da tela inicial */
 window.onload = function () {
     setTimeout(function () {
         const mainContainer = document.getElementById('main_container');
         const inputScreen = document.getElementById('inputScreen');
-
-        console.log("Iniciando a transição da tela de entrada...");
-
         mainContainer.style.display = 'flex'; 
         mainContainer.style.opacity = 0; 
-
         inputScreen.style.transition = 'opacity 0.5s ease-out';
         inputScreen.style.opacity = 0; 
 
         setTimeout(() => {
             inputScreen.style.display = 'none'; 
-            console.log("Tela de entrada ocultada.");
-            
             mainContainer.style.transition = 'opacity 0.5s ease-out';
             mainContainer.style.opacity = 1; 
-            console.log("Tela principal exibida.");
         }, 500); 
     }, 500); 
 }; 
@@ -257,12 +241,10 @@ function  login(){
 }
 
 function checkInputs(){
-
     const userNameValue = userName.value.trim();
     const passNameValue = passName.value.trim();
     const passNameConfirmationValue = passNameConfirmation.value.trim();
     const registEmailValue = registEmail.value.trim();
-    
     let error = false;
     divMessage.innerHTML = ''; 
 
@@ -279,7 +261,6 @@ function checkInputs(){
 
 
     /* VALIDAÇAO DO NOME DE USUARIO */
-
     if(userNameValue === ""){
         const message = document.createElement('p')
         message.textContent = 'Insira seu nome completo.'
@@ -323,7 +304,6 @@ function checkInputs(){
     }
 
     /* VALIDAÇAO DA CONFIRMAÇAO DE SENHA DO USUARIO */
-
     if(passNameConfirmationValue !== passNameValue){
         const message = document.createElement('p')
         message.textContent = 'As senhas não conferem.'
@@ -338,7 +318,6 @@ function checkInputs(){
     }
     
     /* VALIDAÇAO DE EMAIL DO USUARIO*/
-
     if(registEmailValue === "" ){
         const message = document.createElement('p')
         message.textContent = 'Insira seu email.'
@@ -365,11 +344,8 @@ function validEmail(email){
         return regexEmail.test(email);
 }
 
-
-
-
 function togglePassword(input, icon) {
-
+    
     if (input.type === "password") {
         input.type = "text"
         icon.querySelector('i').classList.add('fa-eye-slash')
@@ -379,23 +355,6 @@ function togglePassword(input, icon) {
     }
 }
 
-/* funçao para selecionar a quantidade de estrelas para questoes! */
-
-starsRating.forEach((rating) => {
-    const stars = rating.querySelectorAll('.fa-star')
-    let starSelect = 0;
-
-    stars.forEach((star)=>{
-        star.addEventListener('click', function(){
-            starSelect = this.getAttribute('data-value')
-
-            stars.forEach((s) => s.classList.remove('select'))
-            for( let i = 0; i < starSelect; i++){
-                stars[i].classList.add('select')
-            }
-        })
-    })
-})
 heartRating.forEach((rating) => {
     const heart = rating.querySelector('.fa-heart')
 
@@ -406,7 +365,6 @@ heartRating.forEach((rating) => {
 })
 
     /* variais da tela Home */
-
 const config = document.querySelector('.iconConfig'); 
 const popUser = document.querySelector('.popUpUser'); 
 const home = document.querySelector('.userHome')
@@ -421,12 +379,10 @@ all.addEventListener("click", (e)=>{
 
 config.addEventListener('click', popUpOpen);
 
-
 function popUpOpen() {
     const Visible = popUser.style.display === 'flex';
     popUser.style.display = Visible ? 'none' : 'flex'; 
     overlay2.style.display = Visible ? 'none' : 'block';
-
 }
 
 document.addEventListener('click', function(event) {
@@ -451,11 +407,8 @@ document.addEventListener('click', function(event) {
     }
 });
 
-
-
 /* Adicionar tags para uma busca mais rapida */
 const addCategoryInput = document.querySelector(".AddCategory");
-
 
 addCategoryInput.addEventListener('keydown', (event) =>{
         if(event.key === "Enter"){
@@ -463,7 +416,6 @@ addCategoryInput.addEventListener('keydown', (event) =>{
             event.preventDefault()
         }
     })
-
 
 function createCategory() {
 
@@ -505,3 +457,21 @@ function createCategory() {
 
     addCategoryInput.value = "";
 }
+
+/* funçao para selecionar a quantidade de estrelas para questoes! */
+/* starsRating.forEach((rating) => {
+    const stars = rating.querySelectorAll('.fa-star')
+    let starSelect = 0;
+
+    stars.forEach((star)=>{
+        star.addEventListener('click', function(){
+            starSelect = this.getAttribute('data-value')
+
+            stars.forEach((s) => s.classList.remove('select'))
+            for( let i = 0; i < starSelect; i++){
+                stars[i].classList.add('select')
+            }
+        })
+    })
+}) */
+

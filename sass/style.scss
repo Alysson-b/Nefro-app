@@ -25,6 +25,14 @@ $backgound-linear: #004B87, #04345A;
     padding: 0;
     box-sizing: border-box;
 }
+
+.screen {
+    display: none;
+}
+.screen.active{
+    display: block;
+}
+
 #main_container{
     display: flex;
     @include flex-center();
@@ -767,7 +775,6 @@ $backgound-linear: #004B87, #04345A;
     color: $prymary-color;
 }
 
-
 .totalAcertos{
     display: flex;
     width: 50%;
@@ -1342,6 +1349,9 @@ $backgound-linear: #004B87, #04345A;
     border-radius: 8px;
     max-width: 500px;
     width: 90%;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -1364,6 +1374,29 @@ $backgound-linear: #004B87, #04345A;
     cursor: pointer;
 }
 
+
+.modal-content::-webkit-scrollbar {
+    width: 4px; 
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: $orange-color; 
+    border-radius: 8px; 
+    height: 10px;
+    margin: 10px 0
+    
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: $white-color;
+    border-radius: 4px;
+    margin-top: 10px; 
+    margin-bottom: 10px
+}
+
+
+
 /* MODAL DE EXIBIÇAO DE RESPOSTAS  */
 .Respostas {
     position: fixed;
@@ -1376,6 +1409,7 @@ $backgound-linear: #004B87, #04345A;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    
 }
 
 .close-Respostas {
