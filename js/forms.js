@@ -103,14 +103,25 @@ function showScreen(screenId){
     })
 
     const activeScreen = document.getElementById(screenId)
-    if(activeScreen){
-        activeScreen.classList.add('active')
-    }
+    if(!activeScreen) return;
+    
+     if(activeScreen){
+    } 
+    activeScreen.classList.add('active')
+
+    console.log("Classes da tela ativa:", activeScreen.classList);
+    console.log("Tem create-question?", activeScreen.classList.contains('create-question'));
 
     if (activeScreen.classList.contains('create-question')) {
-        navigation.style.display = 'none';
+        if (navigation) {
+            navigation.style.display = 'none';
+            console.log("Navegação deveria estar escondida");
+        }
     } else {
-        navigation.style.display = navScreens.includes(screenId) ? "block" : "none";
+        if (navigation) {
+            navigation.style.display = navScreens.includes(screenId) ? "block" : "none";
+            console.log("Estado da navegação:", navigation.style.display);
+        }
     }
 }
 showScreen('container')
