@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const newtest = document.querySelector(".newtest")
     const allTest = document.querySelector('.all-tests')
 
+
     /* barra de navegaçao */
     const iconHome = document.querySelector('.house')
     const iconBook = document.querySelector('.book')
@@ -55,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     const navBar = document.querySelector('.navigation ul');
     const indicator = document.querySelector('.indicador');
     const navItems = document.querySelectorAll('.navigation ul li');
+
+    const screens = document.querySelectorAll(".screen")
+    const navScreens = ["home", "allTests", "historico",];
+
     let scrollTop = 0
 
     window.addEventListener("scroll", ()=>{
@@ -66,12 +71,6 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
         scrollTop = scroll
     })
-    
-    function showSection(sectionToShow) {
-        const sections = [home, allTest, editHistBtn];
-        sections.forEach(section => section.style.display = "none");
-        sectionToShow.style.display = "flex";
-    }
     
 function updateIndicator() {
     const activeItem = document.querySelector('.navigation ul li.active');
@@ -93,34 +92,32 @@ navItems.forEach((item) => {
 window.addEventListener('resize', updateIndicator);
 updateIndicator();
 
-/* const screens = document.querySelectorAll(".screen")
-const navScreens = ["home", "historico", "allTests"];
+function showSection(sectionToShow) {
+        const sections = [home, allTest, editHistBtn];
+        sections.forEach(section => section.style.display = "none");
+        sectionToShow.style.display = "flex";
+    }
 
-function showScreen(screenId){
+function showScreen(screenId, isCreateQuestion = false){
 
     screens.forEach(screen =>{
         screen.classList.remove("active")
     })
 
     const activeScreen = document.getElementById(screenId)
-    if(!activeScreen) return;
-    
-     if(activeScreen){
-    } 
-    activeScreen.classList.add('active')
 
-    console.log("Classes da tela ativa:", activeScreen.classList);
-    console.log("Tem create-question?", activeScreen.classList.contains('create-question'));
+    if (!activeScreen) {
+        console.log("Tela não encontrada:", screenId);
+        return;
+    }
+    activeScreen.classList.add("active");
 
-    if (activeScreen.classList.contains('create-question')) {
-        if (navigation) {
+    if (navigation) {
+        if (isCreateQuestion) {
             navigation.style.display = 'none';
-            console.log("Navegação deveria estar escondida");
-        }
-    } else {
-        if (navigation) {
+            
+        } else {
             navigation.style.display = navScreens.includes(screenId) ? "block" : "none";
-            console.log("Estado da navegação:", navigation.style.display);
         }
     }
 }
@@ -130,7 +127,8 @@ document.querySelectorAll('li').forEach((navItem, index) => {
     navItem.addEventListener('click', () => {
         showScreen(navScreens[index]);
     });
-}); */
+});
+
 
 iconHome.addEventListener('click', function(e){
     e.preventDefault()
@@ -197,16 +195,19 @@ loginButton.addEventListener('click', (e) =>{
 editBtn.addEventListener('click', ()=>{
     home.style.display = 'flex'
     sectionCreatQuestion.style.display = 'none'
+    navigation.style.display = "flex"
 })
 histBack.addEventListener('click', ()=>{
     home.style.display = 'flex'
     editHistBtn.style.display = 'none'
+    /* navigation.style.display = "flex" */
 })
 
 newQuestion.addEventListener('click', function(e){
     e.preventDefault()
     allTest.style.display = 'none'
     sectionCreatQuestion.style.display = "flex"
+    navigation.style.display = "none"
     
 })
 all.addEventListener("click", (e)=>{
@@ -382,12 +383,6 @@ const home = document.querySelector('.userHome')
 const overlay2 = document.querySelector('.overlay2');
 const all = document.querySelector(".icon-tests p")
 
-all.addEventListener("click", (e)=>{
-    e.preventDefault()
-    home.style.display = "none"
-    allTest.style.display = "flex"
-})
-
 config.addEventListener('click', popUpOpen);
 
 function popUpOpen() {
@@ -400,14 +395,14 @@ document.addEventListener('click', function(event) {
 
     if (!popUser.contains(event.target) && !config.contains(event.target)) {
         popUser.style.display = 'none';
-        overlay.style.display = 'none'; 
+        overlay2.style.display = 'none'; 
 
     }
 });
 document.querySelector('.creationIcon').addEventListener('click', function() {
     const modal = document.querySelector('.modalCreate');
     modal.classList.toggle('show');
-});
+}); 
 
 document.addEventListener('click', function(event) {
     const modal = document.querySelector('.modalCreate');

@@ -68,7 +68,7 @@ $backgound-linear: #004B87, #04345A;
 }
 
 .container{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -129,7 +129,6 @@ $backgound-linear: #004B87, #04345A;
     cursor: pointer;
     color: $secondy-color;
 }
-
 
 /* Estilizaçao da checkbox e esqueci senha */
 
@@ -838,7 +837,7 @@ $backgound-linear: #004B87, #04345A;
 /* Estilizaçao da tela para criar questao */
 
 .create-question{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1327,8 +1326,6 @@ $backgound-linear: #004B87, #04345A;
     height: 100%;
     border-radius: 10px;
 }
-
-
 /* MODAL PARA EXIBIR TEXTO DA QUESTAO */
 
 .modal-overlay {
@@ -1347,8 +1344,8 @@ $backgound-linear: #004B87, #04345A;
     background: $white-color;
     padding: 20px;
     border-radius: 8px;
-    max-width: 80%;
-    width: 90%;
+    max-width: 90%;
+    width: 100%;
     max-height: 90%;
     overflow-y: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1366,14 +1363,12 @@ $backgound-linear: #004B87, #04345A;
 .close-modal {
     background: $red-color;
     font-family: $font-family;
-    color: #fff;
+    color: $white-color;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
-
-
 
 /* MODAL DE EXIBIÇAO DE RESPOSTAS  */
 .Respostas {
@@ -1386,13 +1381,13 @@ $backgound-linear: #004B87, #04345A;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 999;
     
 }
 
 .close-Respostas {
     background: $red-color;
-    color: #fff;
+    color: $white-color;
     border: none;
     padding: 2px 8px;
     border-radius: 5px;
@@ -1507,7 +1502,6 @@ $backgound-linear: #004B87, #04345A;
     opacity: 0; 
     pointer-events: none;
 }
-
 
 
 /* Estilizaçao da tela de historico */

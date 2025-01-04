@@ -51,7 +51,7 @@
 }
 
 .container {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -862,7 +862,7 @@
 /* tela EXCLUSIVA DO ADM  */
 /* Estilizaçao da tela para criar questao */
 .create-question {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -1397,8 +1397,8 @@
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
+  max-width: 90%;
+  width: 100%;
   max-height: 90%;
   overflow-y: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1434,7 +1434,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .close-Respostas {
