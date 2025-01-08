@@ -71,6 +71,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
         scrollTop = scroll
     })
+
+document.addEventListener('DOMContentLoaded', () => {
+        navItems[0].classList.add('active'); 
+        updateIndicator(); 
+    });
+
     
 function updateIndicator() {
     const activeItem = document.querySelector('.navigation ul li.active');
