@@ -33,25 +33,24 @@ function handleCredentialResponse(response) {
       });
 }
       
-
 function triggerGoogleLogin() {
       document.querySelector('#buttonDiv div').click(); 
       console.log('botao acionado')
 } */ 
 
-      const popUp = document.querySelector(".popUpUser");
-      const profileImage = document.querySelector(".edit-User img");
-      const editIcon = document.querySelector(".edit-User span");
-      const nameInput = document.querySelector(".edit-User h2");
-      const emailInput = document.querySelector(".containerDate input[type='text']");
-      const bioInput = document.querySelector(".descriptionUser textarea");
-      const ufInput = document.querySelector(".locationUser .location input");
-      const cityInput = document.querySelector(".locationUser .city input");
-      const updateButton = document.querySelector(".update");
+    const popUp = document.querySelector(".popUpUser");
+    const profileImage = document.querySelector(".edit-User img");
+    const editIcon = document.querySelector(".edit-User span");
+    const nameInput = document.querySelector(".edit-User h2");
+    const emailInput = document.querySelector(".containerDate input[type='text']");
+    const bioInput = document.querySelector(".descriptionUser textarea");
+    const ufInput = document.querySelector(".locationUser .location input");
+    const cityInput = document.querySelector(".locationUser .city input");
+    const updateButton = document.querySelector(".update");
       
-      const imageHome = document.getElementById("profileImageHome");
-      const dataUserName = document.getElementById("dataUserName");
-      const dataUserEmail = document.getElementById("dataUserEmail");
+    const imageHome = document.getElementById("profileImageHome");
+    const dataUserName = document.getElementById("dataUserName");
+    const dataUserEmail = document.getElementById("dataUserEmail");
       
       let isDataChanged = false;
       
@@ -234,4 +233,20 @@ iconsResp.forEach((icon, index) => {
 });
 
 
+/*============= ESTILIZAÇAO DOS BOXS PARA OCULTAÇAO DAS DIVS ===============*/
+
+
+/* document.querySelectorAll('.titlebox .toggle').forEach((toggle) => {
+  toggle.addEventListener('click', function () {
+      const parent = this.closest('.boxTest'); // Encontra o contêiner pai
+      const content = parent.querySelector('.all-histor'); // Seleciona o conteúdo
+      const icon = this.querySelector('i'); // Seleciona o ícone
+
+      // Alterna a exibição do conteúdo
+      content.classList.toggle('active');
+
+      // Alterna a rotação do ícone
+      icon.classList.toggle('rotated');
+  });
+}); */
 

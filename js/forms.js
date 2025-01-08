@@ -191,6 +191,7 @@ loginButton.addEventListener('click', (e) =>{
     e.preventDefault()
     login();
     showScreen("home")
+    
 })
 editBtn.addEventListener('click', ()=>{
     home.style.display = 'flex'

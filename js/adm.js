@@ -66,11 +66,12 @@ function validQuestion() {
     return true
 }
 
-function messageError(message){
+function messageError(message, isSuccess = false){
     divError.textContent = message;
     divError.style.display = 'block'
     setTimeout(() => {
         divError.style.display = 'none'
+        if(!isSuccess) returnToScreen()
     }, 3000)
 }
 
@@ -78,10 +79,17 @@ questionSaveBtn.addEventListener('click', () =>{
     Questao()
     if(validQuestion()){
         console.log('pergunta salva:', questions)
-
         messageError('pergunta salva com sucesso')
+
     }
 })
+function returnToScreen() {
+    editQuestion.style.display = 'flex';
+    divQuestions.style.display = 'flex';
+    filterQuestion.style.display = 'flex';
+    questionContainer.style.display = 'flex';
+    subSection.style.display = 'none';
+}
 
 respostaCorreta();
 
