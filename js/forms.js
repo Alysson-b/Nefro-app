@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () =>{
 
     /* Variaveis da tela de Login */
+
     const container = document.querySelector('.container')
     const loginForm = document.querySelector('#form')
     const loginEmail = document.querySelector('#inputEmail')
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const loginFirst = document.querySelector('#firstHref')
 
     /* Variaveis da rela de Cadastro */ 
+
     const section3 = document.querySelector('.registration')
     const formRegist = document.querySelector('#form-Regist')
     const userName = document.querySelector('#name')
@@ -27,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const divMessage = document.querySelector('#Error')
 
     /* variaveis para recuperar senha */
+
     const section2 = document.querySelector('.section-recover')
     const recoverInput = document.querySelector('#recoverPassword')
     const recoverButton = document.querySelector('#recoverEmail')
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     /* variaveis da section de create-question / historico */
+
     const sectionCreatQuestion = document.querySelector('.create-question')
     const editBtn = document.querySelector('.createBack')
     const editHistBtn = document.querySelector('.historico')
@@ -55,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     const navigation = document.querySelector('.navigation');
     const navBar = document.querySelector('.navigation ul');
     const indicator = document.querySelector('.indicador');
+    
     const navItems = document.querySelectorAll('.navigation ul li');
-
     const screens = document.querySelectorAll(".screen")
     const navScreens = ["home", "allTests", "historico",];
 
@@ -72,21 +76,23 @@ document.addEventListener('DOMContentLoaded', () =>{
         scrollTop = scroll
     })
 
-document.addEventListener('DOMContentLoaded', () => {
-        navItems[0].classList.add('active'); 
-        updateIndicator(); 
+    document.addEventListener('DOMContentLoaded', () => {
+        navItems[0].classList.add('active'); // Ativa o primeiro item
+        updateIndicator(); // Atualiza o indicador
     });
 
-    
 function updateIndicator() {
-    const activeItem = document.querySelector('.navigation ul li.active');
-    if (activeItem) {
-        const activeRect = activeItem.getBoundingClientRect();
-        const navRect = navBar.getBoundingClientRect();
-        const leftOffset = activeRect.left - navRect.left + (activeRect.width / 2) - (indicator.offsetWidth / 2);
-        indicator.style.left = `${leftOffset}px`;
+        const activeItem = document.querySelector('.navigation ul li.active');
+        if (activeItem) {
+            const activeRect = activeItem.getBoundingClientRect();
+            const navRect = navBar.getBoundingClientRect();
+            const leftOffset = activeRect.left - navRect.left + (activeRect.width / 2) - (indicator.offsetWidth / 2);
+            indicator.style.left = `${leftOffset}px`;
+        }
     }
-}
+    
+
+updateIndicator();  
 navItems.forEach((item) => {
     item.addEventListener('click', () => {
         navItems.forEach((i) => i.classList.remove('active'));
@@ -127,7 +133,7 @@ function showScreen(screenId, isCreateQuestion = false){
         }
     }
 }
-showScreen('container')
+showScreen()
 
 document.querySelectorAll('li').forEach((navItem, index) => {
     navItem.addEventListener('click', () => {
@@ -172,31 +178,47 @@ passConfirIcon.addEventListener('click', () => {
 loginPassIcon.addEventListener('click', () =>{
     togglePassword(loginPass, loginPassIcon)
 })
+
 logar.addEventListener('click', (e) =>{
     e.preventDefault();    
     section3.style.display = 'none'
     container.style.display = 'flex'
 })
+
 loginFirst.addEventListener('click', (e) => {
     e.preventDefault()
     container.style.display = 'none'
     section3.style.display = 'flex'
 })  
+
 lembrarSenha.addEventListener('click', (e) => {
     e.preventDefault();
-    container.style.display = 'none'
-    section2.style.display = 'flex'
+    
+    if (window.innerWidth >= 800) {
+        document.querySelector('.section-recover').classList.add('modal-visible');
+    } else {
+        document.querySelector('.container').style.display = 'none';
+        document.querySelector('.section-recover').style.display = 'flex';
+    }
     
 })
+
 recoverHref.addEventListener('click', (e) =>{
     e.preventDefault();
-    section2.style.display = 'none'
-    container.style.display = 'flex'
+
+    if (window.innerWidth >= 800){
+        document.querySelector('.section-recover').classList.remove('modal-visible'); // Remove a classe modal-visible
+    }else{
+        section2.style.display = 'none'
+        container.style.display = 'flex'
+
+    }
 })
+
 loginButton.addEventListener('click', (e) =>{
     e.preventDefault()
     login();
-    showScreen("home")
+    
     
 })
 editBtn.addEventListener('click', ()=>{
@@ -204,6 +226,7 @@ editBtn.addEventListener('click', ()=>{
     sectionCreatQuestion.style.display = 'none'
     navigation.style.display = "flex"
 })
+
 histBack.addEventListener('click', ()=>{
     home.style.display = 'flex'
     editHistBtn.style.display = 'none'
@@ -217,6 +240,7 @@ newQuestion.addEventListener('click', function(e){
     navigation.style.display = "none"
     
 })
+
 all.addEventListener("click", (e)=>{
     e.preventDefault()
     home.style.display = "none"
@@ -229,6 +253,7 @@ document.querySelector('.iconPerf').addEventListener("click", ()=>{
 })
 
     /* transiçao da tela inicial */
+
 window.onload = function () {
     setTimeout(function () {
         const mainContainer = document.getElementById('main_container');
@@ -255,6 +280,7 @@ function  login(){
     }else{
         container.style.display = 'none'
         home.style.display = 'flex'
+        showScreen("home")
     }
 
 }
@@ -421,6 +447,7 @@ document.addEventListener('click', function(event) {
 });
 
 /* Adicionar tags para uma busca mais rapida */
+
 const addCategoryInput = document.querySelector(".AddCategory");
 
 addCategoryInput.addEventListener('keydown', (event) =>{

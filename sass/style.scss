@@ -35,7 +35,6 @@ $animation: transitionScreen 0.6s ease-in-out;
 }
 
 #main_container{
-    display: flex;
     @include flex-center();
     font-family: $font-family;
     background: linear-gradient(320deg,$white-color, $white-color,$white-color, #faefe0);
@@ -260,7 +259,7 @@ $animation: transitionScreen 0.6s ease-in-out;
 }
 
 
-/* recover password */ 
+/* recover password */
 /* so deve ser exibida ao clicar no botao esqueci a senha */
 
 .section-recover{
@@ -272,6 +271,7 @@ $animation: transitionScreen 0.6s ease-in-out;
     max-width: 100%;
     width: 100vw;
     background: $prymary-color;
+
 }
 
 .recoverPass{
@@ -1853,7 +1853,7 @@ $animation: transitionScreen 0.6s ease-in-out;
 }
 
 
-/* ESTILIZAÇAO DOS BOXS PARA OCULTAÇAO DAS DIVS */
+/* ESTILIZAÇAO DOS BOXS PARA OCULTAÇAO DAS D */
 /* .all-histor {
     display: none;
 }
@@ -2369,155 +2369,3 @@ $animation: transitionScreen 0.6s ease-in-out;
     }
 
 }
-
-
-/* .screen {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-
-  .homePage {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #profileImageHome {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .dataUser {
-    flex-grow: 1;
-  }
-  
-  .dataUser h1 {
-    font-size: 1.5rem;
-    color: $prymary-color;
-    margin: 0;
-  }
-  
-  .dataUser p {
-    color: $color-gray-3;
-    margin: 0;
-  }
-  
-
-  .performance {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-  }
-  
-  .boxDesempenho {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .dadosDesempenho {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 1rem;
-  }
-  
-  .rendimento,
-  .totalDeQuestoes,
-  .totalAcertos,
-  .totalErros {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-
-  .homeTests {
-    margin-bottom: 1.5rem;
-  }
-  
-  .last-teste {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image-teste img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  
-  .all-histor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .boxHome {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .imgCurso img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .boxHomeTexts {
-    padding: 1rem;
-  }
-  
-  .boxHomeTags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  
-  .boxHomeTags span {
-    background-color: $prymary-color;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .homePage {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .last-teste {
-      grid-template-columns: 1fr;
-    }
-    
-    .boxDesempenho {
-      grid-template-columns: 1fr;
-    }
-}
- */

@@ -122,4 +122,30 @@ modal.addEventListener('click', function(event){
 })
 
 
+/* window.addEventListener("resize", () => {
+    const navBar = document.getElementById("navBar");
+    const iconConfig = document.querySelector(".iconConfig");
+    const gearIcon = document.querySelector(".gear-icon");
+    const windowWidth = window.innerWidth;
 
+    if (windowWidth >= 800) {
+        // Mover a navegação para o container do ícone no desktop
+        if (!iconConfig.contains(navBar)) {
+            iconConfig.appendChild(navBar);
+            navBar.style.display = "flex";
+            gearIcon.style.display = "none"; // Esconde o ícone de engrenagem
+        }
+    } else {
+        // Voltar a navegação para fora no mobile
+        const homePage = document.querySelector(".homePage");
+        if (!homePage.contains(navBar)) {
+            homePage.appendChild(navBar);
+            navBar.style.display = "none"; // Oculta no mobile
+            gearIcon.style.display = "inline-block"; // Mostra o ícone de engrenagem
+        }
+    }
+});
+
+// Executa ao carregar a página para garantir o comportamento inicial
+window.dispatchEvent(new Event("resize"));
+ */
