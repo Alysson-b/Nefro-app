@@ -3270,6 +3270,9 @@
     font-weight: 600;
     color: #efefef;
   }
+  #allTests .filter-header-testes {
+    margin-top: 0px;
+  }
   #allTests .filter-header-testes .filter-input {
     display: flex;
     align-items: center;
@@ -3340,13 +3343,13 @@
   }
   #allTests .creationIcon {
     position: fixed;
-    top: 30%;
-    right: 1%;
+    top: 80%;
+    right: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: #007BFF; /* Cor contrastante (azul) */
+    background-color: #00679A;
     border-radius: 50%;
     padding: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -3356,7 +3359,6 @@
   #allTests .creationIcon span {
     font-size: 30px;
     color: #fff;
-    cursor: pointer;
   }
   #allTests .creationIcon .modalCreate {
     display: none;
@@ -3395,8 +3397,8 @@
     border-radius: 4px;
     transition: background-color 0.3s ease;
   }
-  #allTests .creationIcon:hover .modalCreate {
-    display: flex;
+  #allTests .creationIcon .modalCreate.show {
+    display: block;
   }
   .historico {
     display: none;
@@ -3803,9 +3805,9 @@
     display: none;
     position: fixed;
     bottom: -2%;
-    left: 40%;
+    left: 45%;
     height: 40px;
-    width: 12%;
+    width: 15%;
     margin: 20px auto;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
     border-radius: 12px;
@@ -3836,7 +3838,7 @@
   }
   .navigation ul li:hover a i {
     opacity: 1;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
 }
 
