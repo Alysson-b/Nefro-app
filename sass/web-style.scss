@@ -48,8 +48,27 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         height: auto;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     }
+    .homePage{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .home-img{
-        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        width: 120px;
+        height: auto;
+    }
+    
+    .logo{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        position: fixed;
+        bottom: -5px;
+        right: 8%;
     }
     
     .formulario {
@@ -64,6 +83,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         box-shadow: 0px 4px 10px #04335a98;
         position: relative;
         z-index: 1;
+        margin-top: 0;
     }
     
     .log-inputs {
@@ -612,6 +632,19 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             }
             }
 }
+.logo-home{
+    display: flex;
+}
+.logo-home img {
+    width: 650px;
+    height: auto;
+    display: block;
+    margin-left: 15%;
+    transition: all 0.2s ease-in-out;
+}
+.logo-home img:hover{
+    transform: scale(1.05);
+}
 
 .homeTests {
             display: flex;
@@ -733,6 +766,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
             }
 
             .boxHome {
+                max-width: 350px;
+                width: 100%;
                 display: flex;
                 gap: 12px;
                 flex: 1;
@@ -818,7 +853,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
                 }
             }
 }
-
 
 
     /* ==== POP USUARIO ==== */
@@ -1662,7 +1696,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .navigation ul li a i {
-    font-size: 1.1em; 
+    font-size: 0.8em; 
     line-height: 50px;
 }
 
@@ -1675,8 +1709,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .indicador span {
-    width: 40px;
-    height: 40px; 
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -1684,4 +1718,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     opacity: 1;
     transform: translateY(-3px);
 }
+
+
 }
